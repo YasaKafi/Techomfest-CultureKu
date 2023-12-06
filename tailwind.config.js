@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        premierColor: '#F8F4F1',
+        secondaryColor: '#171927',
+      },
+      fontFamily: {
+        poppins:['Poppins', 'sans-serif'],
+        // Ganti dengan font yang Anda inginkan dan nama yang sesuai
+      },
+    },
   },
   plugins: [],
 }
