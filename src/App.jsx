@@ -1,4 +1,6 @@
-import './App.css'
+
+import ComponentOneLanding from './components/landing_component/component_one'
+import NavBar from './global_components/navbar'
 import './index.css'
 
 function App() {
@@ -6,9 +8,8 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold text-secondaryColor font-poppins">
-      Culture Ku
-    </h1>
+      <NavBar/>
+      <ComponentOneLanding/>
         
     </>
   )
