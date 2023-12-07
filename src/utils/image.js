@@ -10,6 +10,9 @@ const bgLogo = "/assets/images/bgLogo.png";
 const Gapura = "/assets/images/gapura.png";
 const PulauPapua = "/assets/images/PulauPapua.png";
 
+const icSearch = "/assets/icons/icSearch.png";
+const icMenu = "/assets/icons/icMenu.png";
+
 const imgaeAsset ={
     TariKecak,
     PatungCandi,
@@ -20,6 +23,8 @@ const imgaeAsset ={
     Gapura,
     PulauPapua,
     bgLogo,
+    icSearch,
+    icMenu,
 }
 
 export default imgaeAsset;
