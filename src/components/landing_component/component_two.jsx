@@ -7,7 +7,7 @@ function ComponentTwoLanding() {
   return (
     <>
       <div className=" w-full h-auto pt-20 mt-20 flex flex-col items-center justify-center bg-darkColor">
-        <div className="flex flex-row w-full pl-16 pr-16 h-48 justify-between bg-darkColor">
+        <div className="flex flex-row w-full pl-32 pr-32 h-48 justify-between bg-darkColor">
           <div className="text-3xl text-basicColor font-poppins font-medium">
             <span className="font-medium italic font-poppins">Explore </span>
             Budaya Indonesia dengan <br />
@@ -20,7 +20,7 @@ function ComponentTwoLanding() {
           />
         </div>
 
-        <div className="flex flex-row w-full pr-16 pl-16 h-auto justify-between bg-darkColor">
+        <div className="flex flex-row w-full pr-32 pl-32 h-auto justify-between bg-darkColor">
             <InformationCard
                 title="Apa itu CultureKu?"
                 content="Website Budaya Indonesia yang berfokus pada seluruh provinsi di Indonesia. Kami  menawarkan hiburan melalui media visual berupa foto dan video, namun tetap menyisipkan elemen budaya lokal. Dengan demikian, kita berharap dapat menggugah minat dan rasa bangga warga Indonesia terhadap kekayaan budaya yang dimiliki oleh negara ini.

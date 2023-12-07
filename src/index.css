@@ -3,3 +3,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+  .custom-width-45 {
+    width: 45%; 
+  }
+  .custom-width-225 {
+    width: 22.5%; 
+  }
+  .custom-width-75 {
+    width: 75%; 
+  }
+  .custom-height-60 {
+    height: 60%; 
+  }
+}
