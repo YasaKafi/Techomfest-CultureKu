@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         basicColor: '#F8F4F1',
-        secondaryColor: '#E88A1B',
         premierColor: '#96C67F',
+        secondaryColor: '#E88A1B',
         darkColor: '#171927',
       },
       fontFamily: {

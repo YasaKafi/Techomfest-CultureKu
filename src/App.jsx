@@ -1,18 +1,19 @@
-
-import ComponentOneLanding from './components/landing_component/component_one'
-import NavBar from './global_components/navbar'
-import './index.css'
+import ComponentOneLanding from "./components/landing_component/component_one";
+import ComponentTwoLanding from "./components/landing_component/component_two";
+import NavBar from "./global_components/navbar";
+import "./index.css";
 
 function App() {
-  
-
   return (
     <>
-      <NavBar/>
-      <ComponentOneLanding/>
-        
+    <div className="bg-basicColor">
+    <NavBar />
+      <ComponentOneLanding />
+      <ComponentTwoLanding />
+    </div>
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

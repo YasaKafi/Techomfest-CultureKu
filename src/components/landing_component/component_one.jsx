@@ -1,14 +1,19 @@
 import React from "react";
 import imageAsset from "../../utils/image";
+import CustomButton from "../../global_components/custom_button";
 
 function ComponentOneLanding() {
   return (
     <>
-      <div className="w-full h-screen  pt-40  ">
+      <div className="  w-full h-screen  pt-32  ">
         <div className="absolute top-0 left-0  ">
-          <img src={imageAsset.bgPetaIndonesia} alt="" />
+          <img
+            src={imageAsset.bgPetaIndonesia}
+            alt=""
+            style={{ height: "1050px", opacity: "0.5" }}
+          />
         </div>
-        <div className="absolute w-1/2 h-44 mr-16 bg-premierColor right-0 bottom-6 rounded-3xl ">
+        <div className="absolute w-1/2 h-44 mb-12 mr-16 bg-premierColor right-0 bottom-6 rounded-3xl ">
           <div>
             <div className="pr-10 pl-10 pt-6 text-3xl font-regular font-poppins text-stone-100 ">
               Penasaran dengan budaya <br />{" "}
@@ -42,13 +47,10 @@ function ComponentOneLanding() {
               identitas unik. Gotong royong dan adaptasi modernitas menonjolkan
               keberagaman yang membanggakan.
             </div>
-
-            <div className="w-52 h-12 relative mt-32 ">
-              <div className="w-52 h-12  absolute bg-gray-900 rounded-3xl" />
-              <div className="w-52 h-12  absolute text-stone-100 text-base font-medium font-poppins leading-none flex justify-center items-center">
-                Jelajahi Sekarang
-              </div>
+            <div className="mt-40">
+            <CustomButton bgColor="darkColor" text="Jelajahi Sekarang" textColor="basicColor" />
             </div>
+            
           </div>
           <div className="w-3/5 h-screen  flex flex-row gap-5">
             <div

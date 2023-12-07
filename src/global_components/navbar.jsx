@@ -19,7 +19,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className=" fixed top-0 left-0 right-0 z-50">
+    <header className=" bg-basicColor  fixed top-0 left-0 right-0 z-50">
       <nav
         className="mx-auto flex flex-row  max-w-7xl items-center  p-6 lg:px-8"
         aria-label="Global"
