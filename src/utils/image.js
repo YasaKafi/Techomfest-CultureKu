@@ -7,6 +7,7 @@ const bgPetaIndonesia = "/assets/images/bgPetaIndonesia.png";
 const bgPetaKalimantan = "/assets/images/bgPetaKalimantan.png";
 const bgPetaSulawesi = "/assets/images/bgPetaSulawesi.png";
 const bgPapua = "/assets/images/bgPapua.png";
+const bgPustaka = "/assets/images/bgPustaka.jpg";
 const bgLogo = "/assets/images/bgLogo.png";
 const Gapura = "/assets/images/gapura.png";
 const Angklung = "/assets/images/Angklung.png";
@@ -22,10 +23,12 @@ const bgSulselOp50 = "/assets/images/bgSulselOp50.png";
 
 const icCulturKu = "/assets/icons/icCultureKu.svg"
 const icSearch = "/assets/icons/icSearch.png";
+const icSearch2 = "/assets/icons/icSearch2.svg"
 const icMenu = "/assets/icons/icMenu.png";
 const icInstagram = "/assets/icons/icInstagram.svg";
 const icFacebook = "/assets/icons/icFacebook.svg";
 const icTwitter = "/assets/icons/icTwitter.svg";
+const icFilter = "/assets/icons/icFilter.svg";
 
 const imgaeAsset ={
     TariKecak,
@@ -34,6 +37,7 @@ const imgaeAsset ={
     Wayang,
     bgCandiBorobudur,
     bgPetaIndonesia,
+    bgPustaka,
     Gapura,
     bgPulauPapua,
     bgLogo,
