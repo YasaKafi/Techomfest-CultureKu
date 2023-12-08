@@ -68,21 +68,20 @@ function ComponentFourLanding() {
           terlepas dari keunikannya yang syarat akan nilai-nilai tradisi dan
           leluhur nenek moyang.
         </div>
-        <div className="w-full h-auto flex flex-row mt-12 gap-6">
+        <div className="w-full 2xl:w-full h-auto flex flex-row mt-12 gap-6 2xl:gap-5 xl:gap-5">
           {clickedCards.map((isClicked, index) => (
             <div
               key={index}
-              className={`custom-width-${
-                isClicked ? "45" : "10"
-              } h-[480px]  flex flex-col justify-${isClicked ? "end" : "evenly"} items-${
+              className={` ${isClicked ? "custom-width-45" : "custom-width-10"}
+               flex flex-col justify-${isClicked ? "end" : "evenly"} items-${
                 isClicked ? "start" : "center"
-              } bg-darkColor   rounded-3xl`}
+              } bg-darkColor   rounded-3xl h-[480px] xl:h-[400px] 2xl:h-[480px] lg:h-[380px]  `}
               onClick={() => handleCardClick(index)}
               style={{
-                backgroundImage: `url(${images[index]})`, // Ganti indeks untuk mengakses gambar yang diinginkan dari array
+                backgroundImage: `url(${images[index]})`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "cover", // atau sesuai dengan kebutuhan
+                backgroundSize: "cover",
                 objectFit: "cover",
               }}
             >
@@ -91,7 +90,7 @@ function ComponentFourLanding() {
                   <div className="w-72 h-12 ml-10 text-stone-100 text-4xl font-semibold font-['Poppins'] mb-5 leading-10">
                     {titles[index]}
                   </div>
-                  <div className="w-full h-auto pr-20 mb-16 ml-10 text-justify text-zinc-300 2xl:text-sm   text-base font-medium font-['Poppins'] leading-relaxed">
+                  <div className="w-full 2xl:w-auto xl:w-auto h-auto pr-20 mb-16 ml-10 text-justify text-zinc-300 2xl:text-sm xl:text-sm   text-base font-medium font-['Poppins'] leading-relaxed">
                     {descriptions[index]}
                   </div>
                 </>

@@ -7,7 +7,7 @@ function ComponentTwoPustaka() {
     <>
       <div className="w-full h-auto pt-20 pb-40 flex flex-row ">
         <div className="w-2/4  pt-20 flex flex-row">
-          <div className="custom-width-25 h-[350px]  relative mt-20">
+          <div className="w-1/4 h-[350px]  relative mt-20">
             <div
               className="w-full h-[400px] -left-20 top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow"
               style={{
@@ -21,7 +21,7 @@ function ComponentTwoPustaka() {
               Sulawesi Selatan
             </div>
           </div>
-          <div className="custom-width-75 h-[350px] -left-14 z-10 relative mt-20">
+          <div className="w-3/4 h-[350px] -left-14 z-10 relative mt-20">
             <div
               className="w-full h-[400px] left-0 top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow"
               style={{

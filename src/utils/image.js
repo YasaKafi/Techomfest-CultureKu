@@ -58,7 +58,9 @@ const imgaeAsset ={
     bgSulselOp50,
     bgKaltimOp50,
     bgKaltim,
-    bgSulsel
+    bgSulsel,
+    icSearch2,
+    icFilter,
 }
 
 export default imgaeAsset;

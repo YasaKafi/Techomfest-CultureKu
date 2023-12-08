@@ -9,8 +9,11 @@
   .custom-width-45 {
     width: 45%; 
   }
-  .custom-width-25 {
-    width: 25%; 
+  .custom-width-35 {
+    width: 35%; 
+  }
+  .custom-width-5 {
+    width: 5%; 
   }
   .custom-width-225 {
     width: 22.5%; 
@@ -18,13 +21,10 @@
   .custom-width-10 {
     width: 10%; 
   }
-  .custom-width-75 {
-    width: 75%; 
-  }
   .custom-width-90 {
     width: 90%; 
   }
-  .custom-height-60 {
-    height: 60%; 
+  .custom-height-78 {
+    height: 78%; 
   }
 }
