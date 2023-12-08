@@ -6,7 +6,7 @@ function ComponentThreeLanding() {
     <>
       <div className="w-full h-auto pb-40 flex flex-row ">
         <div className="w-2/4 ml-32 pt-20 flex flex-col">
-          <div className="flex flex-row font-poppins font-semibold text-4xl ">
+          <div className="flex flex-row font-poppins font-semibold text-[45px] ">
             <div className="text-darkColor pt-2">Fakta</div>
             <div className="bg-secondaryColor text-basicColor ml-2 pt-2 pl-3 pb-2 pr-16">
               Menarik!
@@ -28,9 +28,9 @@ function ComponentThreeLanding() {
           </div>
         </div>
         <div className="w-2/4  pt-20 flex flex-col">
-              <div className="text-4xl font-poppins mt-44 font-bold">
+              <div className="text-[40px] font-poppins mt-44 font-bold">
               Negara dengan 
-              <span className="font-bold text-red-500 text-4xl font-poppins">
+              <span className="font-bold text-red-500 text-[40px] font-poppins">
               {" "}Lebih dari 700{" "}
               </span> <br/> Bahasa dan Dialek
               </div>

@@ -8,7 +8,7 @@ function ComponentTwoLanding() {
     <>
       <div className=" w-full h-auto pt-20 mt-20 flex flex-col items-center justify-center bg-darkColor">
         <div className="flex flex-row w-full pl-32 pr-32 h-48 justify-between bg-darkColor">
-          <div className="text-3xl text-basicColor font-poppins font-medium">
+          <div className="text-[40px] text-basicColor font-poppins font-medium">
             <span className="font-medium italic font-poppins">Explore </span>
             Budaya Indonesia dengan <br />
             <span className="font-bold font-poppins">CultureKu</span>

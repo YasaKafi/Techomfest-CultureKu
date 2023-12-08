@@ -9,6 +9,11 @@ const bgPetaIndonesia = "/assets/images/bgPetaIndonesia.png";
 const bgPapua = "/assets/images/bgPapua.png";
 const bgLogo = "/assets/images/bgLogo.png";
 const Gapura = "/assets/images/gapura.png";
+const Angklung = "/assets/images/Angklung.png";
+const Gamelan = "/assets/images/Gamelan.png";
+const TariSaman = "/assets/images/TariSaman.png";
+const Batik = "/assets/images/Batik.png";
+const bgWayang = "/assets/images/bgWayang.png";
 const bgPulauPapua = "/assets/images/bgPetaPapua.png";
 
 const icSearch = "/assets/icons/icSearch.png";
@@ -26,7 +31,12 @@ const imgaeAsset ={
     bgLogo,
     icSearch,
     icMenu,
-    bgPapua
+    bgPapua,
+    Angklung,
+    Gamelan,
+    TariSaman,
+    Batik,
+    bgWayang
 }
 
 export default imgaeAsset;

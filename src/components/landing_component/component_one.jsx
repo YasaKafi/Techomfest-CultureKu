@@ -39,7 +39,7 @@ function ComponentOneLanding() {
             <div className=" text-gray-900 text-7xl font-bold font-poppins leading-tight">
               Melintasi <br /> Warisan:
             </div>
-            <div className="pt-8 text-base font-poppins font-normal">
+            <div className="pt-12 text-base font-poppins font-normal">
               <span className="font-semibold font-poppins">
                 Budaya Indonesia:{" "}
               </span>
