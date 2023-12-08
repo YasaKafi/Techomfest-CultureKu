@@ -16,7 +16,6 @@ function ComponentThreeLanding() {
             <div className="w-full h-[350px] left-0 top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow"
             style={{
                 backgroundImage: `url(${imageAsset.bgPapua})`,
-
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "auto",

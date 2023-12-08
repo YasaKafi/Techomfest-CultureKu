@@ -5,20 +5,19 @@ import ComponentTwoLanding from "./components/landing_component/component_two";
 import FooterComponent from "./global_components/footer";
 import NavBar from "./global_components/navbar";
 import "./index.css";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import LandingPage from "./pages/landing_page";
+import PustakaBudayaPage from "./pages/pustaka_budaya_page";
 
 function App() {
   return (
-    <>
-    <div className="bg-basicColor">
-    <NavBar />
-      <ComponentOneLanding />
-      <ComponentTwoLanding />
-      <ComponentThreeLanding/>
-      <ComponentFourLanding/>
-      <FooterComponent/>
-    </div>
-      
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/pustaka-budaya" element={<PustakaBudayaPage/>}/>
+      </Routes>
+
+    </Router>
   );
 }
 

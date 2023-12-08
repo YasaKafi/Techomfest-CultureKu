@@ -33,13 +33,13 @@ export default function NavBar() {
 
         <Popover.Group className="hidden ml-64 lg:flex lg:gap-x-5 mr-10 mt-1">
           <a
-            href=""
+            href="/"
             className="text-sm font-semibold leading-6 text-black hover:text-green-600  px-4 py-2 rounded"
           >
             Budaya Kita
           </a>
           <a
-            href=""
+            href="/pustaka-budaya"
             className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
           >
             Pustaka Budaya

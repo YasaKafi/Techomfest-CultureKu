@@ -4,6 +4,8 @@ const TradisiBali = "/assets/images/TradisiBali.png";
 const Wayang = "/assets/images/wayang.png";
 const bgCandiBorobudur = "/assets/images/bgCandiBorobudur.png";
 const bgPetaIndonesia = "/assets/images/bgPetaIndonesia.png";
+const bgPetaKalimantan = "/assets/images/bgPetaKalimantan.png";
+const bgPetaSulawesi = "/assets/images/bgPetaSulawesi.png";
 const bgPapua = "/assets/images/bgPapua.png";
 const bgLogo = "/assets/images/bgLogo.png";
 const Gapura = "/assets/images/gapura.png";
@@ -13,6 +15,10 @@ const TariSaman = "/assets/images/TariSaman.png";
 const Batik = "/assets/images/Batik.png";
 const bgWayang = "/assets/images/bgWayang.png";
 const bgPulauPapua = "/assets/images/bgPetaPapua.png";
+const bgKaltim = "/assets/images/bgKaltim.png";
+const bgSulsel = "/assets/images/bgSulsel.png";
+const bgKaltimOp50 = "/assets/images/bgKaltimOp50.png";
+const bgSulselOp50 = "/assets/images/bgSulselOp50.png";
 
 const icCulturKu = "/assets/icons/icCultureKu.svg"
 const icSearch = "/assets/icons/icSearch.png";
@@ -42,7 +48,13 @@ const imgaeAsset ={
     bgWayang,
     icInstagram,
     icFacebook,
-    icTwitter
+    icTwitter,
+    bgPetaKalimantan,
+    bgPetaSulawesi,
+    bgSulselOp50,
+    bgKaltimOp50,
+    bgKaltim,
+    bgSulsel
 }
 
 export default imgaeAsset;
