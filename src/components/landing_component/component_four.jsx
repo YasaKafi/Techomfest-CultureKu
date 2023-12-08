@@ -1,7 +1,5 @@
 import React from "react";
 import imageAsset from "../../utils/image";
-import CardSliderVertical from "../common_component/card_slider_vertical";
-import CardSliderHorizontal from "../common_component/card_slider_horizontal";
 import { useState } from "react";
 
 function ComponentFourLanding() {
@@ -45,7 +43,7 @@ function ComponentFourLanding() {
   return (
     <>
       <div
-        className="w-full h-screen flex flex-col pl-36 pt-20 pb-20"
+        className="w-full h-screen flex 2xl:pr-20 flex-col pl-36 pt-20 pb-20"
         style={{
           backgroundImage: `url(${imageAsset.bgCandiBorobudur})`,
           backgroundPosition: "center",
@@ -76,11 +74,9 @@ function ComponentFourLanding() {
               key={index}
               className={`custom-width-${
                 isClicked ? "45" : "10"
-              } h-[480px]  flex flex-col justify-${
-                isClicked ? "end" : "evenly"
-              } items-${
+              } h-[480px]  flex flex-col justify-${isClicked ? "end" : "evenly"} items-${
                 isClicked ? "start" : "center"
-              } bg-darkColor rounded-3xl`}
+              } bg-darkColor   rounded-3xl`}
               onClick={() => handleCardClick(index)}
               style={{
                 backgroundImage: `url(${images[index]})`, // Ganti indeks untuk mengakses gambar yang diinginkan dari array
@@ -95,7 +91,7 @@ function ComponentFourLanding() {
                   <div className="w-72 h-12 ml-10 text-stone-100 text-4xl font-semibold font-['Poppins'] mb-5 leading-10">
                     {titles[index]}
                   </div>
-                  <div className="w-full h-24 pr-20 mb-16 ml-10 text-justify text-zinc-300 text-base font-medium font-['Poppins'] leading-relaxed">
+                  <div className="w-full h-auto pr-20 mb-16 ml-10 text-justify text-zinc-300 2xl:text-sm   text-base font-medium font-['Poppins'] leading-relaxed">
                     {descriptions[index]}
                   </div>
                 </>
