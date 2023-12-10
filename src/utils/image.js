@@ -13,6 +13,7 @@ const Gapura = "/assets/images/gapura.png";
 const Angklung = "/assets/images/Angklung.png";
 const Gamelan = "/assets/images/Gamelan.png";
 const TariSaman = "/assets/images/TariSaman.png";
+const TariPiring = "/assets/images/TariPiring.png";
 const Batik = "/assets/images/Batik.png";
 const bgWayang = "/assets/images/bgWayang.png";
 const bgPulauPapua = "/assets/images/bgPetaPapua.png";
@@ -61,6 +62,7 @@ const imgaeAsset ={
     bgSulsel,
     icSearch2,
     icFilter,
+    TariPiring,
 }
 
 export default imgaeAsset;
