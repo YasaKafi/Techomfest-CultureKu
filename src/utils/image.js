@@ -4,6 +4,7 @@ const TradisiBali = "/assets/images/TradisiBali.png";
 const Wayang = "/assets/images/wayang.png";
 const bgCandiBorobudur = "/assets/images/bgCandiBorobudur.png";
 const bgPetaIndonesia = "/assets/images/bgPetaIndonesia.png";
+const bgPetaIndonesia2 = "/assets/images/bgPetaIndonesia2.png";
 const bgPetaKalimantan = "/assets/images/bgPetaKalimantan.png";
 const bgPetaSulawesi = "/assets/images/bgPetaSulawesi.png";
 const bgPapua = "/assets/images/bgPapua.png";
@@ -63,6 +64,7 @@ const imgaeAsset ={
     icSearch2,
     icFilter,
     TariPiring,
+    bgPetaIndonesia2,
 }
 
 export default imgaeAsset;

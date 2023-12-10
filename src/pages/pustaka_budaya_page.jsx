@@ -5,6 +5,8 @@ import NavBar from "../global_components/navbar";
 import ComponentOnePustaka from "../components/pustaka_component/component_one";
 import ComponentThreePustaka from "../components/pustaka_component/component_three";
 import ComponentFourPustaka from "../components/pustaka_component/component_four";
+import ComponentFivePustaka from "../components/pustaka_component/component_five";
+import FooterComponent from "../global_components/footer";
 
 function PustakaBudayaPage() {
   return (
@@ -15,6 +17,8 @@ function PustakaBudayaPage() {
         <ComponentTwoPustaka/>
         <ComponentThreePustaka/>
         <ComponentFourPustaka/>
+        <ComponentFivePustaka/>
+        <FooterComponent/>
       </div>
     </>
   );

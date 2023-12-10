@@ -1,12 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -15,11 +9,19 @@ import "../../index.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import CardSlider from "../common_component/card_slider_pustaka_page";
+import imageAsset from "../../utils/image";
 
 function ComponentFourPustaka() {
   return (
     <>
-      <div className="w-full h-screen flex flex-col pt-20 items-center">
+      <div className="w-full h-screen relative flex flex-col pt-20 items-center">
+      <div className="absolute -bottom-72 right-48 overflow-hidden  ">
+              <img
+                src={imageAsset.bgPetaIndonesia2}
+                alt=""
+                className="h-[500px]  object-cover opacity-5  "
+              />
+            </div>
         <div className="font-semibold text-[45px] font-poppins ">
           Budaya Indonesia
         </div>
@@ -56,24 +58,27 @@ function ComponentFourPustaka() {
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
               <CardSlider />
-            </SwiperSlide><SwiperSlide
+            </SwiperSlide>
+            <SwiperSlide
               data-swiper-autoplay="2000"
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
               <CardSlider />
-            </SwiperSlide><SwiperSlide
+            </SwiperSlide>
+            <SwiperSlide
               data-swiper-autoplay="2000"
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
               <CardSlider />
-            </SwiperSlide><SwiperSlide
+            </SwiperSlide>
+            <SwiperSlide
               data-swiper-autoplay="2000"
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
               <CardSlider />
             </SwiperSlide>
 
-            {/* <div className="absolute top-5 transform flex-row justify-around w-full -translate-y-1/2 flex z-10">
+            {/* <div className="absolute bottom-0 transform flex-row justify-around w-full -translate-y-1/2 flex z-10">
               <div className="prev ">
                 <IoIosArrowBack size={40} />
               </div>
@@ -81,8 +86,11 @@ function ComponentFourPustaka() {
                 <IoIosArrowForward size={40} />
               </div>
             </div> */}
+
+            
           </Swiper>
         </div>
+       
       </div>
     </>
   );
