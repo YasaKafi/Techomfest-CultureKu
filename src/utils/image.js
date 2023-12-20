@@ -2,6 +2,9 @@ const TariKecak = "/assets/images/TariKecak.png";
 const PatungCandi = "/assets/images/PatungCandi.png";
 const TradisiBali = "/assets/images/TradisiBali.png";
 const Wayang = "/assets/images/wayang.png";
+const mieAceh = "/assets/images/mieAceh.png";
+const nasiGurihAceh = "/assets/images/nasiGurihAceh.png";
+const kerakTelorAceh = "/assets/images/kerakTelorAceh.png";
 const bgCandiBorobudur = "/assets/images/bgCandiBorobudur.png";
 const bgPetaIndonesia = "/assets/images/bgPetaIndonesia.png";
 const bgPetaIndonesia2 = "/assets/images/bgPetaIndonesia2.png";
@@ -23,6 +26,7 @@ const bgKaltim = "/assets/images/bgKaltim.png";
 const bgSulsel = "/assets/images/bgSulsel.png";
 const bgKaltimOp50 = "/assets/images/bgKaltimOp50.png";
 const bgSulselOp50 = "/assets/images/bgSulselOp50.png";
+
 
 const icCulturKu = "/assets/icons/icCultureKu.svg"
 const icSearch = "/assets/icons/icSearch.png";
@@ -67,6 +71,9 @@ const imgaeAsset ={
     TariPiring,
     bgPetaIndonesia2,
     bgPetaSumatera,
+    mieAceh,
+    kerakTelorAceh,
+    nasiGurihAceh,
 }
 
 export default imgaeAsset;
