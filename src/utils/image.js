@@ -7,6 +7,7 @@ const bgPetaIndonesia = "/assets/images/bgPetaIndonesia.png";
 const bgPetaIndonesia2 = "/assets/images/bgPetaIndonesia2.png";
 const bgPetaKalimantan = "/assets/images/bgPetaKalimantan.png";
 const bgPetaSulawesi = "/assets/images/bgPetaSulawesi.png";
+const bgPetaSumatera = "/assets/images/bgPetaSumatera.png";
 const bgPapua = "/assets/images/bgPapua.png";
 const bgPustaka = "/assets/images/bgPustaka.jpg";
 const bgLogo = "/assets/images/bgLogo.png";
@@ -65,6 +66,7 @@ const imgaeAsset ={
     icFilter,
     TariPiring,
     bgPetaIndonesia2,
+    bgPetaSumatera,
 }
 
 export default imgaeAsset;
