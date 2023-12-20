@@ -15,6 +15,9 @@
   .custom-width-40 {
     width: 40%; 
   }
+  .custom-width-30 {
+    width: 30%; 
+  }
   .custom-width-5 {
     width: 5%; 
   }
@@ -38,6 +41,9 @@
   }
   .custom-height-45 {
     height: 45%; 
+  }
+  .custom-height-55 {
+    height: 55%; 
   }
   .custom-height-35 {
     height: 35%; 
