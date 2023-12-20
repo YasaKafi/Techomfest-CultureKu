@@ -3,6 +3,7 @@ import ComponentOneDetail from "../components/detail_component/component_one";
 import NavBar from "../global_components/navbar";
 import ComponentTwoDetail from "../components/detail_component/component_two";
 import ComponentThreeDetail from "../components/detail_component/component_three";
+import ComponentFourDetail from "../components/detail_component/component_four";
 
 function DetailPage() {
   return (
@@ -12,6 +13,7 @@ function DetailPage() {
         <ComponentOneDetail />
         <ComponentTwoDetail/>
         <ComponentThreeDetail/>
+        <ComponentFourDetail/>
       </div>
     </>
   );

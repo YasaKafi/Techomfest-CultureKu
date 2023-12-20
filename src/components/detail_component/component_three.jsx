@@ -24,7 +24,7 @@ function ComponentThreeDetail() {
                 }}
               />
               <div className="w-full h-60 left-0 bottom-0 mb-12 ml-12 absolute 2xl:text-xl xl:text-xl    -rotate-90 text-stone-100 text-2xl font-semibold font-['Poppins'] leading-relaxed">
-                Sulawesi Selatan
+                Mie Aceh
               </div>
             </div>
             <div className="w-3/4 h-[350px] -left-14 z-10 relative mt-20">
