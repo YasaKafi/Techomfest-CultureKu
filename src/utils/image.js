@@ -2,9 +2,14 @@ const TariKecak = "/assets/images/TariKecak.png";
 const PatungCandi = "/assets/images/PatungCandi.png";
 const TradisiBali = "/assets/images/TradisiBali.png";
 const Wayang = "/assets/images/wayang.png";
+const senjataOne = "/assets/images/senjataOne.png";
+const senjataTwo = "/assets/images/senjataTwo.png";
+const senjataThree = "/assets/images/senjataThree.png";
+const senjataFour = "/assets/images/senjataFour.png";
 const mieAceh = "/assets/images/mieAceh.png";
 const nasiGurihAceh = "/assets/images/nasiGurihAceh.png";
 const kerakTelorAceh = "/assets/images/kerakTelorAceh.png";
+const adatAceh = "/assets/images/adatAceh.png";
 const bgCandiBorobudur = "/assets/images/bgCandiBorobudur.png";
 const bgPetaIndonesia = "/assets/images/bgPetaIndonesia.png";
 const bgPetaIndonesia2 = "/assets/images/bgPetaIndonesia2.png";
@@ -74,6 +79,11 @@ const imgaeAsset ={
     mieAceh,
     kerakTelorAceh,
     nasiGurihAceh,
+    adatAceh,
+    senjataOne,
+    senjataTwo,
+    senjataThree,
+    senjataFour
 }
 
 export default imgaeAsset;
