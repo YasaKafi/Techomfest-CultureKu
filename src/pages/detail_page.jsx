@@ -7,6 +7,7 @@ import ComponentFourDetail from "../components/detail_component/component_four";
 import ComponentFiveDetail from "../components/detail_component/component_five";
 import ComponentSixDetail from "../components/detail_component/component_six";
 import ComponentSevenDetail from "../components/detail_component/component_seven";
+import FooterComponent from "../global_components/footer";
 
 function DetailPage() {
   return (
@@ -20,6 +21,7 @@ function DetailPage() {
         <ComponentFiveDetail/>
         <ComponentSixDetail/>
         <ComponentSevenDetail/>
+        <FooterComponent/>
       </div>
     </>
   );
