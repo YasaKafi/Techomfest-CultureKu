@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../global_components/navbar";
 import ComponentOneHistoriografi from "../components/historiografi_component/component_one";
 import ComponentTwoHistoriografi from "../components/historiografi_component/component_two";
+import ComponentThreeHistoriografi from "../components/historiografi_component/component_three";
 
 function HistoriografiPage() {
   return (
@@ -10,6 +11,7 @@ function HistoriografiPage() {
             <NavBar/>
             <ComponentOneHistoriografi/>
             <ComponentTwoHistoriografi/>
+            <ComponentThreeHistoriografi/>
         </div>
     </>
   );

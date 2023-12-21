@@ -2,6 +2,10 @@ const TariKecak = "/assets/images/TariKecak.png";
 const PatungCandi = "/assets/images/PatungCandi.png";
 const TradisiBali = "/assets/images/TradisiBali.png";
 const Wayang = "/assets/images/wayang.png";
+const gunungBromo = "/assets/images/gunungBromo.png";
+const telukCendrawasih = "/assets/images/telukCendrawasih.png";
+const candiPrambanan = "/assets/images/candiPrambanan.png";
+const puraTanahLot = "/assets/images/puraTanahLot.png";
 const borobudurOne = "/assets/images/borobudurOne.png";
 const borobudurTwo = "/assets/images/borobudurTwo.png";
 const borobudurThree = "/assets/images/borobudurThree.png";
@@ -96,6 +100,10 @@ const imgaeAsset ={
     borobudurOne,
     borobudurTwo,
     borobudurThree,
+    gunungBromo,
+    telukCendrawasih,
+    candiPrambanan,
+    puraTanahLot,
 }
 
 export default imgaeAsset;
