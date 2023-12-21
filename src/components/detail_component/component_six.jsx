@@ -5,7 +5,7 @@ function ComponentSixDetail() {
   return (
     <>
       <div className="w-full h-screen flex flex-col relative">
-        <div className="absolute top-32 right-[550px] w-1/5 h-3/5 ">
+        <div className="absolute top-32 right-[550px] w-1/5 h-3/5 2xl:right-[550px] xl:right-[450px] lg:right-[350px] ">
           <img
             src={imageAsset.adatAceh}
             alt=""
@@ -16,7 +16,7 @@ function ComponentSixDetail() {
             }}
           />
         </div>
-        <div className="absolute top-64 right-28 w-1/5 h-3/5 ">
+        <div className="absolute top-64 right-28 w-1/5 h-3/5 lg:right-20">
           <img
             src={imageAsset.adatAceh}
             alt=""
@@ -34,8 +34,8 @@ function ComponentSixDetail() {
             Salah satu adat yang masih dilakukan adalah upacara
           </div>
         </div>
-        <div className="w-full h-3/5 bg-premierColor pl-36 bg-opacity-10 ">
-          <div className="w-1/2 h-3/5  pl-36 bg-opacity-10 flex flex-col justify-center mt-24">
+        <div className="w-full h-3/5 bg-premierColor pl-24 bg-opacity-10 ">
+          <div className="w-1/2 h-3/5   bg-opacity-10 flex flex-col justify-center mt-24">
             <div className="text-[40px] font-poppins  font-bold">
               Upacara
               <span className="font-bold text-orange-500 text-[40px] font-poppins">
