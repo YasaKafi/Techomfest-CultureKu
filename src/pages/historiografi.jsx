@@ -4,6 +4,7 @@ import ComponentOneHistoriografi from "../components/historiografi_component/com
 import ComponentTwoHistoriografi from "../components/historiografi_component/component_two";
 import ComponentThreeHistoriografi from "../components/historiografi_component/component_three";
 import ComponentFourHistoriografi from "../components/historiografi_component/component_four";
+import FooterComponent from "../global_components/footer";
 
 function HistoriografiPage() {
   return (
@@ -14,6 +15,7 @@ function HistoriografiPage() {
             <ComponentTwoHistoriografi/>
             <ComponentThreeHistoriografi/>
             <ComponentFourHistoriografi/>
+            <FooterComponent/>
         </div>
     </>
   );

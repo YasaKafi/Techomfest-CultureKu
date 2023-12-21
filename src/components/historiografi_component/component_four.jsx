@@ -32,22 +32,22 @@ function ComponentFourHistoriografi() {
 
   return (
     <>
-      <div className="w-full h-fit relative">
-        <div className="w-full h-screen flex flex-row pl-32 pt-24 pr-10">
-          <div className="custom-width-30 h-1/5  flex flex-col justify-center pt-44 font-poppins mr-5">
-            <div className="font-semibold text-[40px]">
+      <div className="w-full h-fit relative ">
+        <div className="w-full  flex lg:flex-row es:flex-col lg:pl-32 es:pl-12 pt-20 pr-10 mb-36">
+          <div className="lg:custom-width-30   flex flex-col lg:justify-center es:justify-center es:w-full es:items-center es:text-center lg:text-start font-poppins mr-5">
+            <div className="font-semibold md:text-[30px] sm:text-[25px] es:text-[20px] lg:text-[40px]">
               Makhluk Mitologi Indonesia
             </div>
-            <div className="font-regular text-lg mt-10">
+            <div className="font-regular lg:text-lg sm:text-sm es:text-xs lg:mt-10 es:mt-8 lg:mb-0 es:mb-12">
               Menurut Kamus Besar Bahasa Indonesia, mitologi adalah ilmu tentang
               bentuk sastra yang mengandung konsepsi dan dongeng suci mengenai
               kehidupan dewa dan makhluk halus dalam suatu kebudayaan.
             </div>
           </div>
-          <div className="custom-width-70 h-4/5 flex flex-row ">
+          <div className="lg:custom-width-70  flex es:w-full flex-row lg:flex es:grid es:grid-cols-2 es:grid-rows-2 es:gap-6">
             {titles.map((title, index) => (
-              <div className="custom-width-30 h-1/2 mr-5 relative" key={index}>
-                <div className="absolute bottom-0 left-0 font-poppins font-semibold text-3xl text-white ml-10 mb-10">
+              <div className={`lg:custom-width-30 es:w-full lg:h-96 sm:h-64 es:h-48  mr-5 relative ${index === 2 ? 'es:col-span-2 es:row-start-2' : ''}`} key={index}>
+                <div className="absolute bottom-0 left-0 font-poppins font-semibold text-3xl text-white lg:ml-10 lg:mb-10 sm:ml-5 sm:mb-5 es:ml-5 es:mb-5 sm:text-2xl lg:text-3xl es:text-sm">
                   {title}
                 </div>
                 <img
@@ -62,7 +62,7 @@ function ComponentFourHistoriografi() {
         </div>
         {showOverlay && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className=" w-1/2 h-1/2 bg-basicColor p-12 rounded-2xl shadow-2xl relative z-10">
+            <div className=" sm:w-1/2 sm:h-1/2 es:w-3/4 es:h-2/3 bg-basicColor p-12 rounded-2xl shadow-2xl relative z-10">
               <span
                 onClick={closeOverlay}
                 className="absolute top-0 right-0 m-3 cursor-pointer"
@@ -70,10 +70,10 @@ function ComponentFourHistoriografi() {
                 <IoMdCloseCircle size={40} className="hover:text-red-500" />
               </span>
               <div className="font-poppins flex flex-col justify-center items-center">
-                <div className="font-semibold text-[45px]">
+                <div className="font-semibold lg:text-[45px] sm:text-[30px] es:text-lg">
                   {titles[selectedImageIndex]}
                 </div>
-                <div className="font-regular text-lg text-justify pt-5 lg:text-sm xl:text-sm 2xl:text-lg">
+                <div className="font-regular  text-justify pt-5 lg:text-lg xl:text-sm 2xl:text-lg sm:text-xs md:text-sm es:text-[10px] es:leading-4">
                   {descriptions[selectedImageIndex]}
                 </div>
               </div>

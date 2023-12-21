@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        es: '300px',
+      },
+      opacity: ['group-hover'],
       colors: {
         basicColor: '#F8F4F1',
         premierColor: '#96C67F',
