@@ -2,6 +2,9 @@ const TariKecak = "/assets/images/TariKecak.png";
 const PatungCandi = "/assets/images/PatungCandi.png";
 const TradisiBali = "/assets/images/TradisiBali.png";
 const Wayang = "/assets/images/wayang.png";
+const garuda = "/assets/images/garuda.png";
+const ahool = "/assets/images/ahool.png";
+const leak = "/assets/images/leak.png";
 const gunungBromo = "/assets/images/gunungBromo.png";
 const telukCendrawasih = "/assets/images/telukCendrawasih.png";
 const candiPrambanan = "/assets/images/candiPrambanan.png";
@@ -104,6 +107,9 @@ const imgaeAsset ={
     telukCendrawasih,
     candiPrambanan,
     puraTanahLot,
+    garuda,
+    ahool,
+    leak,
 }
 
 export default imgaeAsset;

@@ -3,6 +3,7 @@ import NavBar from "../global_components/navbar";
 import ComponentOneHistoriografi from "../components/historiografi_component/component_one";
 import ComponentTwoHistoriografi from "../components/historiografi_component/component_two";
 import ComponentThreeHistoriografi from "../components/historiografi_component/component_three";
+import ComponentFourHistoriografi from "../components/historiografi_component/component_four";
 
 function HistoriografiPage() {
   return (
@@ -12,6 +13,7 @@ function HistoriografiPage() {
             <ComponentOneHistoriografi/>
             <ComponentTwoHistoriografi/>
             <ComponentThreeHistoriografi/>
+            <ComponentFourHistoriografi/>
         </div>
     </>
   );

@@ -54,7 +54,7 @@ function ComponentThreeHistoriografi() {
         </div>
         <div className="w-full h-screen flex flex-col">
           <div className="w-full h-1/5  flex flex-col items-center font-poppins">
-            <div className="font-semibold text-[45px]">Keindahan Indonesia</div>
+            <div className="font-semibold text-[40px]">Keindahan Indonesia</div>
             <div className="font-regular text-lg">
               Indonesia memiliki keindahan dari alam ataupun bangunan
               prasejarahnya
@@ -91,7 +91,7 @@ function ComponentThreeHistoriografi() {
                   {descriptions[selectedImageIndex]}
                 </div>
               </div>
-              {/* Isi konten overlay di sini */}
+              
             </div>
           </div>
         )}
