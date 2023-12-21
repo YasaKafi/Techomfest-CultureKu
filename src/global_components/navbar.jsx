@@ -53,7 +53,7 @@ export default function NavBar() {
           </a>
 
           <a
-            href=""
+            href="/historiografi-page"
             className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
           >
             Historiografi

@@ -2,6 +2,9 @@ const TariKecak = "/assets/images/TariKecak.png";
 const PatungCandi = "/assets/images/PatungCandi.png";
 const TradisiBali = "/assets/images/TradisiBali.png";
 const Wayang = "/assets/images/wayang.png";
+const bgOneHistoriografi = "/assets/images/bgOneHistoriografi.png";
+const bgTwoHistoriografi = "/assets/images/bgTwoHistoriografi.png";
+const bgThreeHistoriografi = "/assets/images/bgThreeHistoriografi.png";
 const senjataOne = "/assets/images/senjataOne.png";
 const senjataTwo = "/assets/images/senjataTwo.png";
 const senjataThree = "/assets/images/senjataThree.png";
@@ -83,7 +86,10 @@ const imgaeAsset ={
     senjataOne,
     senjataTwo,
     senjataThree,
-    senjataFour
+    senjataFour,
+    bgOneHistoriografi,
+    bgTwoHistoriografi,
+    bgThreeHistoriografi
 }
 
 export default imgaeAsset;
