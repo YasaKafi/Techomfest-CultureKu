@@ -6,8 +6,9 @@ import { useLocation } from "react-router-dom";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar({provinsiData}) {
   const location = useLocation();
+  const namaProvinsiArray = provinsiData.map(provinsi => provinsi.nama_provinsi);
   const isActive = (path) => {
     return location.pathname === path ? "font-semibold" : "";
   };
@@ -34,70 +35,7 @@ export default function NavBar() {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const islandsData = [
-    "Pulau Sumatera",
-    "Pulau Jawa",
-    "Pulau Bali & Nusa Tenggara",
-    "Pulau Kalimantan",
-    "Pulau Sulawesi",
-    "Pulau Papua",
-  ];
-
-  const provincesData = [
-    "Provinsi Aceh",
-    "Provinsi Sumatera Utara",
-    "Provinsi Sumatera Barat",
-    "Provinsi Riau",
-    "Provinsi Kepulauan Riau",
-    "Provinsi Jambi",
-    "Provinsi Bengkulu",
-    "Provinsi Sumatera Selatan",
-    "Provinsi Kepulauan Bangka Belitung",
-    "Provinsi Lampung",
-    "Provinsi Banten",
-    "Provinsi Jawa Barat",
-    "Provinsi DKI Jakarta",
-    "Provinsi Jawa Tengah",
-    "Provinsi DI Yogyakarta",
-    "Provinsi Jawa Timur",
-    "Provinsi Bali",
-    "Provinsi Nusa Tenggara Barat",
-    "Provinsi Nusa Tenggara Timur",
-    "Provinsi Kalimantan Barat",
-    "Provinsi Kalimantan Tengah",
-    "Provinsi Kalimantan Selatan",
-    "Provinsi Kalimantan Timur",
-    "Provinsi Kalimantan Utara",
-    "Provinsi Sulawesi Utara",
-    "Provinsi Gorontalo",
-    "Provinsi Sulawesi Tengah",
-    "Provinsi Sulawesi Barat",
-    "Provinsi Sulawesi Selatan",
-    "Provinsi Sulawesi Tenggara",
-    "Provinsi Papua Barat",
-    "Provinsi Papua",
-  ];
-
-  const provinsiDetailData = [
-    {
-      id: 1,
-      namaProvinsi: "Aceh",
-      descProvinsi:
-        "Aceh adalah sebuah provinsi di Indonesia yang terletak di ujung barat laut pulau Sumatera.",
-      imageHeroOne: `${imageAssets.TariKecak}`,
-      imageHeroTwo: `${imageAssets.PatungCandi}`,
-      imageHeroThree: `${imageAssets.TradisiBali}`,
-    },
-    {
-      id: 2,
-      namaProvinsi: "Sumatera Utara",
-      descProvinsi:
-        "Sumatera Utara merupakan provinsi terbesar di Pulau Sumatera.",
-      imageHeroOne: `${imageAssets.TariPiring}`,
-      imageHeroTwo: `${imageAssets.TariSaman}`,
-      imageHeroThree: `${imageAssets.TariKecak}`,
-    },
-  ];
+  console.log(namaProvinsiArray);
 
   return (
     <header className=" bg-basicColor shadow-md fixed top-0 left-0 right-0 z-50">
@@ -156,7 +94,7 @@ export default function NavBar() {
                   Cari Provinsimu disini
                 </div>
                 <div className="w-full h-full es:flex mt-10 es:flex-col es:pb-10  lg:grid lg:grid-cols-2 lg:gap-4 xl:grid-cols-3 xl:gap-6 overflow-scroll">
-                  {provincesData.map((provinsi, index) => (
+                  {namaProvinsiArray.map((provinsi, index) => (
                     <Link
                       className="{`text-lg leading-6 text-neutral-500 hover:text-green-600 px-4 py-2 rounded`}"
                       key={index}

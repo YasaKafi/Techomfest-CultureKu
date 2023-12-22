@@ -30,7 +30,7 @@ function DetailPage({ provinsiData, budayaData }) {
   return (
     <>
       <div className="bg-basicColor ">
-        <NavBar />
+        <NavBar provinsiData={provinsiData}/>
         <ComponentOneDetail 
             namaProvinsi={provinsi.nama_provinsi}
             deskripsiProvinsi={provinsi.deskripsi_provinsi}

@@ -6,11 +6,11 @@ import ComponentThreeLanding from "../components/landing_component/component_thr
 import ComponentFourLanding from "../components/landing_component/component_four";
 import FooterComponent from "../global_components/footer";
 
-function LandingPage() {
+function LandingPage({ provinsiData }) {
   return (
     <>
       <div className="bg-basicColor">
-        <NavBar />
+        <NavBar provinsiData={provinsiData}/>
         <ComponentOneLanding />
         <ComponentTwoLanding />
         <ComponentThreeLanding />

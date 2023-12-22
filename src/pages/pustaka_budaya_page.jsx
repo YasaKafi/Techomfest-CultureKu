@@ -8,11 +8,11 @@ import ComponentFourPustaka from "../components/pustaka_component/component_four
 import ComponentFivePustaka from "../components/pustaka_component/component_five";
 import FooterComponent from "../global_components/footer";
 
-function PustakaBudayaPage() {
+function PustakaBudayaPage({ provinsiData }) {
   return (
     <>
       <div className="bg-basicColor">
-        <NavBar />
+        <NavBar provinsiData={provinsiData}/>
         <ComponentOnePustaka/>
         <ComponentTwoPustaka/>
         <ComponentThreePustaka/>
