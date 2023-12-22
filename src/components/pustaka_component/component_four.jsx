@@ -15,24 +15,29 @@ function ComponentFourPustaka() {
   return (
     <>
       <div className="w-full h-screen relative flex flex-col pt-20 items-center">
-      <div className="absolute -bottom-72 right-48 overflow-hidden  ">
-              <img
-                src={imageAsset.bgPetaIndonesia2}
-                alt=""
-                className="h-[500px]  object-cover opacity-5  "
-              />
-            </div>
-        <div className="font-semibold text-[45px] font-poppins ">
+        <div className="absolute -bottom-72 right-48 overflow-hidden lg:flex es:hidden  ">
+          <img
+            src={imageAsset.bgPetaIndonesia2}
+            alt=""
+            className="h-[500px]  object-cover opacity-5  "
+          />
+        </div>
+        <div className="font-semibold text-[45px] md:text-[35px] sm:text-[25px] es:text-[20px] lg:text-[40px]">
           Budaya Indonesia
         </div>
-        <div className="text-base font-poppins text-center  mt-6 font-regular">
+        <div className="font-regular text-lg lg:text-lg sm:text-sm es:text-xs es:text-center md:px-0 es:px-4">
           Indonesia memiliki beragam kebudayaan, mulai dari sabang sampai
           merauke
         </div>
         <div className="w-full custom-height-60  pt-16">
           <Swiper
+          breakpoints={{
+            768: {
+              spaceBetween: 50,
+            },
+          }}
             autoplay={true}
-            spaceBetween={200}
+           
             effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
@@ -57,40 +62,49 @@ function ComponentFourPustaka() {
               data-swiper-autoplay="2000"
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
-              <CardSlider />
+              <CardSlider
+                name="Tari Piring"
+                asal="Minangkabau, Sumatera Barat"
+                desc="Tari Piring adalah tarian tradisional Indonesia yang berasal dari Minangkabau, Sumatera Barat. Dalam tarian ini, penari membawakan piring-piring yang ditempatkan di atas telapak tangannya dengan berbagai gerakan dinamis."
+                images={imageAsset.TariPiring} // Ganti dengan sumber gambar yang sesuai
+              />
             </SwiperSlide>
             <SwiperSlide
               data-swiper-autoplay="2000"
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
-              <CardSlider />
+              <CardSlider
+                name="Tari Kecak"
+                asal="Bali, Indonesia"
+                desc="Tarian ini terkenal karena penggunaan vokal ( cak ) yang berulang-ulang oleh para penari laki-laki yang duduk bersila dalam formasi lingkaran. Biasanya, tarian ini menggambarkan cerita Ramayana, sebuah kisah epik dari mitologi Hindu. Kecak sering dimainkan dalam upacara keagamaan di Bali, namun juga menjadi atraksi turis yang populer."
+                images={imageAsset.TariKecak} // Ganti dengan sumber gambar yang sesuai
+              />
             </SwiperSlide>
             <SwiperSlide
               data-swiper-autoplay="2000"
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
-              <CardSlider />
+             <CardSlider
+                name="Tari Saman"
+                asal="Aceh, Indonesia"
+                desc="Tarian ini dilakukan dalam kelompok besar di mana para penari duduk berbaris dan mengeksekusi gerakan-gerakan tangan, tubuh, dan kepala yang terkoordinasi dengan cepat. Musik dan nyanyian juga menjadi bagian integral dari tarian ini. Awalnya, Saman adalah bagian dari tradisi yang dilakukan dalam upacara adat, namun sekarang menjadi tarian yang sering ditampilkan dalam berbagai acara budaya."
+                images={imageAsset.TariSaman} // Ganti dengan sumber gambar yang sesuai
+              />
             </SwiperSlide>
             <SwiperSlide
               data-swiper-autoplay="2000"
               className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
             >
-              <CardSlider />
+              <CardSlider
+                name="Tari Serimpi"
+                asal="Jawa Tengah, Indonesia"
+                desc="Tarian ini merupakan tarian keraton Jawa yang anggun dan elegan, biasanya dipentaskan oleh dua penari wanita yang mengenakan kostum tradisional Jawa yang indah. Gerakan yang lemah lembut dan anggun dalam tarian ini menggambarkan kehalusan dan keanggunan, sering kali menjadi bagian dari upacara keagamaan, perayaan kerajaan, atau pentas seni budaya. Tarian ini juga menjadi simbol keindahan dan keanggunan tradisi Jawa."
+                images={imageAsset.TariSerimpi} // Ganti dengan sumber gambar yang sesuai
+              />
             </SwiperSlide>
 
-            {/* <div className="absolute bottom-0 transform flex-row justify-around w-full -translate-y-1/2 flex z-10">
-              <div className="prev ">
-                <IoIosArrowBack size={40} />
-              </div>
-              <div className="next">
-                <IoIosArrowForward size={40} />
-              </div>
-            </div> */}
-
-            
           </Swiper>
         </div>
-       
       </div>
     </>
   );

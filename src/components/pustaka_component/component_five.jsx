@@ -6,7 +6,7 @@ function ComponentFivePustaka() {
   return (
     <>
       <div className="w-full h-screen bg-basicColor  flex items-center flex-col">
-        <div className="flex flex-row font-poppins font-semibold text-[45px] ">
+        <div className="flex flex-row font-poppins font-semibold text-[45px] md:text-[35px] sm:text-[25px] es:text-[20px] lg:text-[40px] ">
           <div className="bg-premierColor text-basicColor mr-2 pt-1 pl-7 pb-1 pr-7">
             Galeri
           </div>

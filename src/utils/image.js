@@ -1,6 +1,7 @@
 const TariKecak = "/assets/images/TariKecak.jpeg";
 const PatungCandi = "/assets/images/PatungCandi.jpeg";
 const TradisiBali = "/assets/images/TradisiBali.jpeg";
+const TariSerimpi = "/assets/images/TariSerimpi.jpeg";
 const Wayang = "/assets/images/wayang.png";
 const garuda = "/assets/images/garuda.png";
 const ahool = "/assets/images/ahool.png";
@@ -110,6 +111,7 @@ const imgaeAsset ={
     garuda,
     ahool,
     leak,
+    TariSerimpi,
 }
 
 export default imgaeAsset;
