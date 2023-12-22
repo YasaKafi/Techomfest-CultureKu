@@ -3,7 +3,7 @@ import imageAsset from "../../utils/image";
 import { RiInformationFill } from "react-icons/ri";
 import { IoMdCloseCircle } from "react-icons/io";
 
-function ComponentSevenDetail() {
+function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, imageBudayaTiga, imageBudayaEmpat}) {
   const [showOverlay, setShowOverlay] = useState(false);
 
   const handleImageClick = () => {
@@ -21,12 +21,12 @@ function ComponentSevenDetail() {
           <div className="w-full h-1/5  flex flex-col items-center font-poppins">
             <div className="font-semibold text-[45px]">Senjata Daerah</div>
             <div className="font-regular text-lg">
-            Aceh memiliki sejata daerah juga lho, berikut beberapa senjata daerahnya
+            {namaProvinsi} memiliki sejata daerah juga lho, berikut beberapa senjata daerahnya
             </div>
           </div>
           <div className="w-full h-4/5 flex flex-row px-32 ">
             <img
-              src={imageAsset.senjataOne}
+              src={imageBudayaSatu}
               alt=""
               className="custom-width-30 h-4/5 object-cover mr-5 rounded-[30px] cursor-pointer"
               onClick={handleImageClick}
@@ -34,13 +34,13 @@ function ComponentSevenDetail() {
             <div className="flex custom-width-70 h-4/5 flex-col">
             <div className="flex w-full h-3/5 flex-row mr-5 mb-5 ">
               <img
-                src={imageAsset.senjataTwo}
+                src={imageBudayaDua}
                 alt=""
                 className="custom-width-30 h-full object-fill rounded-[30px] mr-5 cursor-pointer"
                 onClick={handleImageClick}
               />
               <img
-                src={imageAsset.senjataThree}
+                src={imageBudayaTiga}
                 alt=""
                 className="custom-width-70 h-full object-cover  rounded-[30px] cursor-pointer"
                 onClick={handleImageClick}
@@ -49,7 +49,7 @@ function ComponentSevenDetail() {
 
             <div className="w-full h-2/5 ">
             <img
-                src={imageAsset.senjataFour}
+                src={imageBudayaEmpat}
                 alt=""
                 className="w-full h-full object-cover  rounded-[30px] cursor-pointer"
                 onClick={handleImageClick}

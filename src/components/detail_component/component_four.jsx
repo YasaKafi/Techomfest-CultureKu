@@ -1,26 +1,20 @@
 import React from "react";
 import imageAsset from "../../utils/image";
 
-function ComponentFourDetail() {
+function ComponentFourDetail({namaBudaya, deskripsiBudaya, imageBudaya, imageSide}) {
   return (
     <>
       <div className="w-full h-auto  pb-40 flex flex-row">
         <div className="w-2/4  pt-20 ml-24 flex flex-col justify-center items-center">
           <div className="text-[30px] font-poppins mt-24 font-bold">
-            Nasi Gurih Aceh
+            {namaBudaya}
           </div>
 
           <div className="text-base text-center font-poppins mr-16 mt-6 font-regular">
             <span className="font-semibold text-base font-poppins ">
-              Nasi Gurih Aceh{" "}
+              {namaBudaya}{" "}
             </span>{" "}
-            adalah hidangan nasi yang diolah dengan rempah-rempah khas Aceh,
-            memberikan cita rasa gurih yang unik dan lezat. Nasi ini sering
-            disajikan dengan lauk pauk tradisional seperti rendang, ikan masak
-            kuah kuning, dan telur dadar. Kelebihan Nasi Gurih Aceh terletak
-            pada paduan sempurna antara nasi yang harum dan rempah-rempah yang
-            menjadikan hidangan ini favorit di kalangan pencinta kuliner
-            Indonesia
+            {deskripsiBudaya}
           </div>
         </div>
         <div className="w-2/4  pt-20 flex flex-row">
@@ -28,7 +22,7 @@ function ComponentFourDetail() {
             <div
               className="w-full h-[400px] left-0 top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow"
               style={{
-                backgroundImage: `url(${imageAsset.nasiGurihAceh})`,
+                backgroundImage: `url(${imageBudaya})`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -39,7 +33,7 @@ function ComponentFourDetail() {
             <div
               className="w-full h-[400px] -right-0  top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow"
               style={{
-                backgroundImage: `url(${imageAsset.bgKaltimOp50})`,
+                backgroundImage: `url(${imageSide})`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -48,7 +42,7 @@ function ComponentFourDetail() {
               }}
             />
             <div className="  right-0 bottom-5 mb-12 pl-16 w-full  absolute 2xl:text-xl xl:text-xl  text-center  -rotate-90 text-stone-100 text-2xl font-semibold font-['Poppins'] leading-relaxed">
-              Nasi Gurih Aceh
+              {namaBudaya}
             </div>
           </div>
         </div>

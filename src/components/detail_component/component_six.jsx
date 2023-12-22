@@ -1,13 +1,13 @@
 import React from "react";
 import imageAsset from "../../utils/image";
 
-function ComponentSixDetail() {
+function ComponentSixDetail({namaBudaya, deskripsiBudaya, imageBudaya, imageSide}) {
   return (
     <>
       <div className="w-full h-screen flex flex-col relative">
         <div className="absolute top-32 right-[550px] w-1/5 h-3/5 2xl:right-[550px] xl:right-[450px] lg:right-[350px] ">
           <img
-            src={imageAsset.adatAceh}
+            src={imageBudaya}
             alt=""
             className="w-full h-full object-cover rounded-[30px]"
             style={{
@@ -18,7 +18,7 @@ function ComponentSixDetail() {
         </div>
         <div className="absolute top-64 right-28 w-1/5 h-3/5 lg:right-20">
           <img
-            src={imageAsset.adatAceh}
+            src={imageSide}
             alt=""
             className="w-full h-full object-cover rounded-[30px]"
             style={{
@@ -40,22 +40,15 @@ function ComponentSixDetail() {
               Upacara
               <span className="font-bold text-orange-500 text-[40px] font-poppins">
                 {" "}
-                Peusijuek{" "}
+                {namaBudaya}{" "}
               </span>{" "}
             </div>
 
             <div className="text-base font-poppins mr-36 mt-6 font-regular">
               <span className="font-semibold text-base font-poppins ">
-                Upacara Peusijuek{" "}
+                Upacara {namaBudaya}{" "}
               </span>{" "}
-              adalah tradisi unik dari masyarakat Aceh yang dilakukan sebagai
-              bagian dari prosesi perkawinan. Upacara ini melibatkan proses
-              membersihkan calon pengantin wanita dengan air bunga yang dihiasi
-              oleh bunga-bunga segar. Air bunga tersebut dianggap sebagai
-              lambang kesucian dan kebersihan yang akan menyertai calon
-              pengantin dalam memulai hidup baru bersama pasangannya. Selain
-              itu, Peusijuek juga mencerminkan simbolisme kebahagiaan dan
-              keberkahan untuk mengawali pernikahan dengan tulus dan suci.
+              {deskripsiBudaya}
             </div>
           </div>
         </div>

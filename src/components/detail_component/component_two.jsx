@@ -3,7 +3,7 @@ import imageAsset from "../../utils/image";
 import { RiInformationFill } from "react-icons/ri";
 import { IoMdCloseCircle } from "react-icons/io";
 
-function ComponentTwoDetail() {
+function ComponentTwoDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, imageBudayaTiga, imageBudayaEmpat, imageBudayaLima}) {
   const [showOverlay, setShowOverlay] = useState(false);
 
   const handleImageClick = () => {
@@ -32,25 +32,25 @@ function ComponentTwoDetail() {
           <div className="w-full h-1/5  flex flex-col items-center font-poppins">
             <div className="font-semibold text-[45px]">Tarian Daerah</div>
             <div className="font-regular text-lg">
-              Berikut beberapa tarian daerah yang berasal dari Provinsi Aceh
+              Berikut beberapa tarian daerah yang berasal dari Provinsi { namaProvinsi }
             </div>
           </div>
           <div className="w-full h-4/5 flex flex-row px-32 ">
             <img
-              src={imageAsset.TariPiring}
+              src={imageBudayaSatu}
               alt=""
               className="custom-width-30 h-4/5 object-fill mr-5 rounded-[30px] cursor-pointer"
               onClick={handleImageClick}
             />
             <div className="flex custom-width-30 h-4/5 flex-col mr-5 ">
               <img
-                src={imageAsset.TariPiring}
+                src={imageBudayaDua}
                 alt=""
                 className="w-full custom-height-45 object-fill rounded-[30px] mb-5 cursor-pointer"
                 onClick={handleImageClick}
               />
               <img
-                src={imageAsset.TariPiring}
+                src={imageBudayaTiga}
                 alt=""
                 className="w-full custom-height-55 object-fill  rounded-[30px] cursor-pointer"
                 onClick={handleImageClick}
@@ -58,13 +58,13 @@ function ComponentTwoDetail() {
             </div>
             <div className="flex custom-width-40 h-4/5 flex-col">
               <img
-                src={imageAsset.TariPiring}
+                src={imageBudayaEmpat}
                 alt=""
                 className="w-full h-1/2 object-fill mb-5 rounded-[30px] cursor-pointer"
                 onClick={handleImageClick}
               />
               <img
-                src={imageAsset.TariPiring}
+                src={imageBudayaLima}
                 alt=""
                 className="w-full custom-height-45 object-fill  rounded-[30px] cursor-pointer"
                 onClick={handleImageClick}
