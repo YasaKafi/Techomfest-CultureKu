@@ -139,16 +139,6 @@ export default function NavBar({provinsiData}) {
                   </li>
                   <li className="mb-4">
                     <a
-                      href="/detail-page"
-                      className={`text-lg leading-6 text-neutral-700 hover:text-green-600  px-4 py-2 rounded ${isActive(
-                        "/detail-page"
-                      )}`}
-                    >
-                      Detail Page
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
                       href="/historiografi-page"
                       className={`text-lg leading-6 text-neutral-700 hover:text-green-600  px-4 py-2 rounded ${isActive(
                         "/historiografi-page"
@@ -190,13 +180,6 @@ export default function NavBar({provinsiData}) {
             className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
           >
             Pustaka Budaya
-          </a>
-
-          <a
-            href="/detail-page"
-            className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
-          >
-            Quiz
           </a>
 
           <a

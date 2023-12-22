@@ -35,16 +35,16 @@ function ComponentFiveDetail({namaBudaya, deskripsiBudaya, imageBudaya, imageSid
               />
             </div>
           </div>
-          <div className="w-2/4   flex flex-col justify-center">
-            <div className="text-[30px] font-poppins mt-24 font-semibold">
-            {namaBudaya}
+          <div className="lg:w-2/4 es:w-full lg:pl-0 es:pl-8 flex flex-col lg:items-start  justify-center">
+            <div className="lg:text-[30px] es:text-[25px]  font-poppins mt-24 font-semibold">
+              {namaBudaya}
             </div>
 
             <div className="text-base font-poppins lg:mr-36 es:mr-14 mt-6 font-regular">
               <span className="font-semibold text-base font-poppins ">
-              {namaBudaya}{" "}
+                {namaBudaya}{" "}
               </span>{" "}
-              {deskripsiBudaya}
+                {deskripsiBudaya}
             </div>
           </div>
         </div>

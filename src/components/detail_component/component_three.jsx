@@ -6,9 +6,11 @@ function ComponentThreeDetail({namaProvinsi, imageBudaya, namaBudaya, deskripsiB
     <>
       <div className="w-full h-auto flex lg:mt-0 sm:mt-44 es:mt-0 flex-col">
         <div className="w-full h-1/5  flex flex-col items-center font-poppins">
-          <div className="font-semibold text-[45px]">Makanan Daerah</div>
-          <div className="font-regular text-lg">
-            Yakin tidak tertarik dengan makanan daerah Provinsi {namaProvinsi}?
+        <div className="font-semibold text-[45px] md:text-[35px] sm:text-[25px] es:text-[20px] lg:text-[40px]">
+            Makanan Daerah
+          </div>
+          <div className="font-regular text-lg lg:text-lg sm:text-sm es:text-xs es:text-center md:px-0 es:px-4">
+          Yakin tidak tertarik dengan makanan daerah Provinsi {namaProvinsi}?
           </div>
         </div>
         <div className="w-full h-auto  lg:pb-40 es:pb-10 flex lg:flex-row es:flex-col ">
@@ -17,14 +19,14 @@ function ComponentThreeDetail({namaProvinsi, imageBudaya, namaBudaya, deskripsiB
               <div
                 className="w-full h-[400px] lg:-left-20 es:-left-5 top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow"
                 style={{
-                  backgroundImage: `url(${imageSide})`,
+                  backgroundImage: `url(${imageBudaya})`,
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
               />
               <div className="w-full h-60 left-0 bottom-0 mb-12 ml-12 absolute 2xl:text-xl xl:text-xl    -rotate-90 text-stone-100 text-2xl font-semibold font-['Poppins'] leading-relaxed">
-                Mie Aceh
+                {namaBudaya}
               </div>
             </div>
             <div className="w-3/4 h-[350px] lg:-left-14 es:right-0 z-10 relative mt-20">
@@ -39,16 +41,16 @@ function ComponentThreeDetail({namaProvinsi, imageBudaya, namaBudaya, deskripsiB
               />
             </div>
           </div>
-          <div className="w-2/4   flex flex-col justify-center">
-            <div className="text-[30px] font-poppins mt-24 font-semibold">
-              Mie Aceh
+          <div className="lg:w-2/4 es:w-full lg:pl-0 es:pl-8 flex flex-col lg:items-start  justify-center">
+            <div className="lg:text-[30px] es:text-[25px]  font-poppins mt-24 font-semibold">
+              {namaBudaya}
             </div>
 
             <div className="text-base font-poppins lg:mr-36 es:mr-14 mt-6 font-regular">
               <span className="font-semibold text-base font-poppins ">
                 {namaBudaya}{" "}
               </span>{" "}
-              {deskripsiBudaya}
+                {deskripsiBudaya}
             </div>
           </div>
         </div>

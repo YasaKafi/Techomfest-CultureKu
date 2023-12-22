@@ -45,46 +45,47 @@ function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, im
     <>
       <div className="w-full h-fit relative">
        
-        <div className="w-full h-screen flex flex-col">
-          <div className="w-full h-1/5  flex flex-col items-center font-poppins">
-            <div className="font-semibold text-[45px]">Senjata Daerah</div>
-            <div className="font-regular text-lg">
-            {namaProvinsi} memiliki sejata daerah juga lho, berikut beberapa senjata daerahnya
+        <div className="w-full h-screen pt-10 flex flex-col">
+        <div className="w-full   flex flex-col items-center font-poppins">
+            <div className="font-semibold text-[45px] md:text-[35px] sm:text-[25px] es:text-[20px] lg:text-[40px]">
+              Senjata Daerah
+            </div>
+            <div className="font-regular text-lg lg:text-lg sm:text-sm es:text-xs es:text-center md:px-0 es:px-4">
+              Aceh memiliki sejata daerah juga lho, berikut beberapa senjata
+              daerahnya
             </div>
           </div>
-          <div className="w-full h-4/5 flex flex-row px-32 ">
+          <div className="w-full mt-10 h-4/5 flex lg:flex-row es:flex-col lg:px-32 es:px-8 ">
             <img
               src={imageBudayaSatu}
               alt=""
-              className="custom-width-30 h-4/5 object-cover mr-5 rounded-[30px] cursor-pointer"
+              className="lg:custom-width-30 es:w-full lg:h-4/5 es:h-3/5 object-cover mr-5 lg:rounded-[30px] es:rounded-[10px] cursor-pointer"
               onClick={handleImageClickSatu}
             />
-            <div className="flex custom-width-70 h-4/5 flex-col">
-            <div className="flex w-full h-3/5 flex-row mr-5 mb-5 ">
-              <img
-                src={imageBudayaDua}
-                alt=""
-                className="custom-width-30 h-full object-fill rounded-[30px] mr-5 cursor-pointer"
-                onClick={handleImageClickDua}
-              />
-              <img
-                src={imageBudayaTiga}
-                alt=""
-                className="custom-width-70 h-full object-cover  rounded-[30px] cursor-pointer"
-                onClick={handleImageClickTiga}
-              />
-            </div>
+            <div className="flex lg:custom-width-70 es:w-full mt-5 h-4/5 flex-col">
+              <div className="flex w-full h-3/5 flex-row lg:mr-5 es:mr-0 mb-5 ">
+                <img
+                  src={imageBudayaDua}
+                  alt=""
+                  className="custom-width-30 h-full object-fill lg:rounded-[30px] es:rounded-[10px]  cursor-pointer"
+                  onClick={handleImageClickDua}
+                />
+                <img
+                  src={imageBudayaTiga}
+                  alt=""
+                  className="custom-width-70 h-full object-cover  lg:rounded-[30px] es:rounded-[10px] pl-2 cursor-pointer"
+                  onClick={handleImageClickTiga}
+                />
+              </div>
 
-            <div className="w-full h-2/5 ">
-            <img
-                src={imageBudayaEmpat}
-                alt=""
-                className="w-full h-full object-cover  rounded-[30px] cursor-pointer"
-                onClick={handleImageClickEmpat}
-              />
-
-            </div>
-                
+              <div className="w-full h-2/5 ">
+                <img
+                  src={imageBudayaEmpat}
+                  alt=""
+                  className="w-full h-full object-cover  lg:rounded-[30px] es:rounded-[10px] cursor-pointer"
+                  onClick={handleImageClickEmpat}
+                />
+              </div>
             </div>
             
             
@@ -158,7 +159,6 @@ function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, im
                 {deskripsiBudayaEmpat}
                 </div>
             </div>
-            {/* Isi konten overlay di sini */}
           </div>
         </div>
       )}

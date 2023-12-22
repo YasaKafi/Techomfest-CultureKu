@@ -41,15 +41,22 @@ function ComponentSixDetail({namaBudaya, deskripsiBudaya, imageBudaya, imageSide
               Upacara
               <span className="font-bold text-orange-500  font-poppins">
                 {" "}
-                {namaBudaya}{" "}
+                Peusijuek{" "}
               </span>{" "}
             </div>
 
-            <div className="text-base font-poppins mr-36 mt-6 font-regular">
-              <span className="font-semibold text-base font-poppins ">
-                Upacara {namaBudaya}{" "}
+            <div className="text-base font-poppins lg:mr-36 es:mr-8 mt-6 font-regular">
+              <span className="font-semibold md:text-base es:text-sm font-poppins ">
+                Upacara Peusijuek{" "}
               </span>{" "}
-              {deskripsiBudaya}
+              adalah tradisi unik dari masyarakat Aceh yang dilakukan sebagai
+              bagian dari prosesi perkawinan. Upacara ini melibatkan proses
+              membersihkan calon pengantin wanita dengan air bunga yang dihiasi
+              oleh bunga-bunga segar. Air bunga tersebut dianggap sebagai
+              lambang kesucian dan kebersihan yang akan menyertai calon
+              pengantin dalam memulai hidup baru bersama pasangannya. Selain
+              itu, Peusijuek juga mencerminkan simbolisme kebahagiaan dan
+              keberkahan untuk mengawali pernikahan dengan tulus dan suci.
             </div>
           </div>
         </div>
