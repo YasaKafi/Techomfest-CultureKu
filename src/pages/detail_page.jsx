@@ -45,6 +45,16 @@ function DetailPage({ provinsiData, budayaData }) {
             imageBudayaTiga={budayaTari[2].image_budaya}
             imageBudayaEmpat={budayaTari[3].image_budaya}
             imageBudayaLima={budayaTari[4].image_budaya}
+            namaBudayaSatu={budayaTari[0].nama_budaya}
+            namaBudayaDua={budayaTari[1].nama_budaya}
+            namaBudayaTiga={budayaTari[2].nama_budaya}
+            namaBudayaEmpat={budayaTari[3].nama_budaya}
+            namaBudayaLima={budayaTari[4].nama_budaya}
+            deskripsiBudayaSatu={budayaTari[0].deskripsi_budaya}
+            deskripsiBudayaDua={budayaTari[1].deskripsi_budaya}
+            deskripsiBudayaTiga={budayaTari[2].deskripsi_budaya}
+            deskripsiBudayaEmpat={budayaTari[3].deskripsi_budaya}
+            deskripsiBudayaLima={budayaTari[4].deskripsi_budaya}
         />
         <ComponentThreeDetail
             namaProvinsi={provinsi.nama_provinsi}
@@ -77,6 +87,14 @@ function DetailPage({ provinsiData, budayaData }) {
             imageBudayaDua={budayaSenjata[1].image_budaya}
             imageBudayaTiga={budayaSenjata[2].image_budaya}
             imageBudayaEmpat={budayaSenjata[3].image_budaya}
+            namaBudayaSatu={budayaSenjata[0].nama_budaya}
+            namaBudayaDua={budayaSenjata[1].nama_budaya}
+            namaBudayaTiga={budayaSenjata[2].nama_budaya}
+            namaBudayaEmpat={budayaSenjata[3].nama_budaya}
+            deskripsiBudayaSatu={budayaSenjata[0].deskripsi_budaya}
+            deskripsiBudayaDua={budayaSenjata[1].deskripsi_budaya}
+            deskripsiBudayaTiga={budayaSenjata[2].deskripsi_budaya}
+            deskripsiBudayaEmpat={budayaSenjata[3].deskripsi_budaya}
         />
         <FooterComponent/>
       </div>
