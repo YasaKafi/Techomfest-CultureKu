@@ -35,13 +35,7 @@ function LandingPage() {
         <ComponentThreeLanding />
         <ComponentFourLanding />
         <FooterComponent />
-        {provinsiData.map(provinsi => (
-          <div key={provinsi.id_provinsi}>
-            <h2>{provinsi.nama_provinsi}</h2>
-            <p>Luas Teritorial: {provinsi.luas_teritorial}</p>
-            <p>Jumlah Penduduk: {provinsi.jumlah_penduduk}</p>
-          </div>
-        ))}
+        
       </div>
     </>
   );
