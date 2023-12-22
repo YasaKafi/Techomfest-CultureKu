@@ -32,21 +32,25 @@ const apiService = {
     }
   },
 
-const provinsiDetailData = [
-    {
-      id: 1,
-      namaProvinsi: 'Aceh',
-      descProvinsi: 'Aceh adalah sebuah provinsi di Indonesia yang terletak di ujung barat laut pulau Sumatera.',
-      imageHeroOne: `${imageAsset.TariKecak}`,
-      imageHeroTwo: `${imageAsset.PatungCandi}`,
-      imageHeroThree: `${imageAsset.TradisiBali}`,
-    },
-    {
-      id: 2,
-      namaProvinsi: 'Sumatera Utara',
-      descProvinsi: 'Sumatera Utara merupakan provinsi terbesar di Pulau Sumatera.',
-      imageHeroOne: `${imageAsset.TariPiring}`,
-      imageHeroTwo: `${imageAsset.TariSaman}`,
-      imageHeroThree: `${imageAsset.TariKecak}`,
-    },
-  ];
+  getJenisBudayaData: async () => {
+    try {
+      const response = await axios.get(API_ENDPOINTS_JENIS_BUDAYA.getDataBudaya);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching jenis-budaya data:', error);
+      throw error;
+    }
+  },
+
+  getBudayaData: async () => {
+    try {
+      const response = await axios.get(API_ENDPOINTS_BUDAYA.getDataBudaya);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching budaya data:', error);
+      throw error;
+    }
+  },
+};
+
+export default apiService;

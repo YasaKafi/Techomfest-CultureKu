@@ -54,16 +54,15 @@ function ComponentTwoDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, imag
     <>
       <div className="w-full h-fit relative">
         <div
-          className="w-1/5  h-16 absolute  flex flex-row right-0 justify-start pl-5 items-center top-10 rounded-xl bg-premierColor es:flex lg:flex lg:w-1/5 lg:h-16 sm:w-28 sm:h-12 es:w-20 es:h-10 lg:top-10 sm:top-12 es:top-14"
+          className="custom-width-30  h-16 absolute flex flex-row right-0 justify-start pl-5 items-center top-10 rounded-xl bg-premierColor"
           style={{
             borderBottomRightRadius: "0",
             borderTopRightRadius: "0",
           }}
-          onClick={() => setShowOverlayInformation(true)}
         >
           <RiInformationFill color="white" size={30} />{" "}
-          <span className="font-regular text-white pl-4  text-sm font-poppins lg:flex es:hidden">
-            {""}Ketuk Pada Foto Untuk Melihat Penjelasan{" "}
+          <span className="font-regular text-white pl-4  text-lg font-poppins">
+            {""}Ketuk Untuk Melihat Penjelasan{" "}
           </span>
         </div>
         <div className="w-full h-screen flex flex-col">
@@ -195,27 +194,12 @@ function ComponentTwoDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, imag
                 {deskripsiBudayaEmpat}
                 </div>
             </div>
+            {/* Isi konten overlay di sini */}
           </div>
-        )}
-        {showOverlayInformation && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className=" lg:w-1/5 lg:h-1/4 es:w-1/2 es:h-2/5 bg-basicColor p-12 rounded-2xl shadow-2xl relative z-10 ">
-              <span
-                onClick={closeOverlay}
-                className="absolute top-0 right-0 m-3 cursor-pointer"
-              >
-                <IoMdCloseCircle size={40} className="hover:text-red-500" />
-              </span>
-              <div className="font-poppins flex flex-col justify-center items-center">
-                <div className="font-semibold text-[25px]">Information Box</div>
-                <div className="font-regular text-lg text-justify pt-5 lg:text-sm xl:text-sm 2xl:text-lg">
-                  Ketuk Pada Foto Untuk Melihat Penjelasan
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+        </div>
+      )}
       </div>
+      
     </>
   );
 }
