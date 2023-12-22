@@ -1,3 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+  .custom-width-45 {
+    width: 45%; 
+  }
+  .custom-width-35 {
+    width: 35%; 
+  }
+  .custom-width-40 {
+    width: 40%; 
+  }
+  .custom-width-30 {
+    width: 30%; 
+  }
+  .custom-width-5 {
+    width: 5%; 
+  }
+  .custom-width-225 {
+    width: 22.5%; 
+  }
+  .custom-width-10 {
+    width: 10%; 
+  }
+  .custom-width-90 {
+    width: 90%; 
+  }
+  .custom-width-70 {
+    width: 70%; 
+  }
+  .custom-height-78 {
+    height: 78%; 
+  }
+  .custom-height-60 {
+    height: 60%; 
+  }
+  .custom-height-70 {
+    height: 70%; 
+  }
+  .custom-height-45 {
+    height: 45%; 
+  }
+  .custom-height-55 {
+    height: 55%; 
+  }
+  .custom-height-35 {
+    height: 35%; 
+  }
+  .custom-height-30 {
+    height: 30%; 
+  }
+  .custom-height-40 {
+    height: 40%; 
+  }
+  .custom-top-70 {
+    top: 70%; 
+  } 
+  .custom-left-53 {
+    left: 53%; 
+  } 
+  .custom-left-65 {
+    left: 65%; 
+  }
+  .custom-left-10 {
+    left: 10%; 
+  }
+  .custom-left-48 {
+    left: 48%; 
+  }
+  .custom-left-45 {
+    left: 45%; 
+  }
+  .custom-left-54 {
+    left: 54%; 
+  }
+  .custom-left-20 {
+    left: 20%; 
+  }
+}
+
+
+:root {
+  --swiper-icon-prev: url(../public/assets/icons/icArrowPrev.svg);
+  --swiper-icon-next: url(../public/assets/icons/icArrowNext.svg);
+  --swiper-theme-color: #00000
+}
+
+.swiper-button-prev {
+  background-image: var(--swiper-icon-prev);
+}
+
+.swiper-button-next {
+  background-image: var(--swiper-icon-next);
+}
+
