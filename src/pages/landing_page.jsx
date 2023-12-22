@@ -29,7 +29,7 @@ function LandingPage() {
   return (
     <>
       <div className="bg-basicColor">
-        <NavBar />
+        <NavBar provinsiData={provinsiData}/>
         <ComponentOneLanding />
         <ComponentTwoLanding />
         <ComponentThreeLanding />
