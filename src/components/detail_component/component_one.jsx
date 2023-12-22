@@ -5,16 +5,16 @@ function ComponentOneDetail ({namaProvinsi,deskripsiProvinsi,imageHeroOne,imageH
     return(
         <>
             <div className="  w-full   pt-32  ">
-            <div className="absolute top-52 left-0  ">
+            <div className="absolute top-52 left-0 lg:flex es:hidden ">
           <img
             src={imageAsset.bgPetaSumatera}
             alt=""
             style={{ height: "650px", opacity: "0.1" }}
           />
         </div>
-        <div className="flex flex-row  pl-16 pr-16">
-          <div className="w-2/5 h-[650px]  px-12  flex flex-col justify-center">
-            <div className=" text-gray-900 text-7xl font-bold font-poppins leading-tight">
+        <div className="flex lg:flex-row es:flex-col lg:px-16 md:px-0">
+          <div className="w-full lg:h-[650px] es:h-auto px-12  flex flex-col justify-center">
+            <div className=" text-gray-900 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl es:text-3xl font-bold font-poppins leading-tight">
               {namaProvinsi}
             </div>
             <div className="pt-12 text-base font-poppins font-normal">
@@ -25,21 +25,21 @@ function ComponentOneDetail ({namaProvinsi,deskripsiProvinsi,imageHeroOne,imageH
             </div>
             
           </div>
-          <div className="w-3/5 h-screen relative ">
-            <div className="custom-width-40  h-1/2 absolute  custom-left-10 top-32 xl:custom-height-45 2xl:h-1/2  lg:custom-height-45">
-              <img src={imageHeroOne}  alt="" className="h-full w-full object-cover rounded-[50px] " />
+          <div className="w-full h-[90vh] relative ">
+            <div className="lg:custom-width-40 es:custom-width-45 es:left-0 lg:h-1/2 es:h-2/5 es:custom-width-60 absolute  lg:custom-left-10 top-32 xl:custom-height-45 2xl:h-1/2  lg:custom-height-45">
+              <img src={imageHeroOne}  alt="" className="h-full w-full object-cover es:rounded-r-[30px] es:rounded-l-none  lg:rounded-[30px]" />
             </div>
 
             <div
-              className="custom-width-35  custom-height-45 absolute  custom-left-47 top-12  2xl:custom-left-47  xl:left-2/4 lg:custom-left-54 xl:custom-height-45  lg:custom-height-45 "
+              className="lg:custom-width-35 es:w-1/2 lg:custom-height-45 es:h-3/5 absolute sm:left-3/5 es:custom-left-48 lg:custom-left-53 top-12  2xl:custom-left-53   lg:custom-left-53 xl:custom-height-45  lg:custom-height-45 "
             >
-                <img src={imageHeroTwo}  alt="" className="h-full w-full object-cover rounded-[80px] " />
+                <img src={imageHeroTwo}  alt="" className="h-full w-full object-cover rounded-[30px] " />
             </div>
 
             <div
-              className="custom-width-70  h-2/6  absolute   custom-left-20 top-[400px] 2xl:h-2/6 xl:custom-height-30 lg:custom-height-30 2xl:custom-width-70 xl:custom-width-70 lg:w-4/5 "
+              className="lg:custom-width-70 es:w-11/12 lg:h-2/6 md:h-2/5 sm:h-1/4 es:h-1/4 absolute es:right-0  lg:custom-left-20 top-[450px] 2xl:h-2/6 xl:custom-height-30 lg:custom-height-30 2xl:custom-width-70 xl:custom-width-70 lg:w-4/5 "
             >
-                <img src={imageHeroThree}  alt="" className=" w-full max-h-full object-cover  rounded-[80px]" />
+                <img src={imageHeroThree}  alt="" className=" w-full max-h-full object-cover  es:rounded-l-[30px] es:rounded-r-none  lg:rounded-[30px]" />
             </div>
           </div>
         </div>

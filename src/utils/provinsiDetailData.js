@@ -3,8 +3,8 @@ import imageAsset from "../utils/image";
 const provinsiDetailData = [
     {
       id: 1,
-      namaProvinsi: 'Aceh',
-      descProvinsi: 'Aceh adalah sebuah provinsi di Indonesia yang terletak di ujung barat laut pulau Sumatera.',
+      namaProvinsi: 'Provinsi Aceh',
+      descProvinsi: 'Aceh, provinsi di ujung barat Sumatera, Indonesia, terkenal dengan warisan budaya Islamnya dan keindahan alamnya yang menakjubkan, menjadi destinasi wisata dengan identitas yang kuat.',
       imageHeroOne: `${imageAsset.TariKecak}`,
       imageHeroTwo: `${imageAsset.PatungCandi}`,
       imageHeroThree: `${imageAsset.TradisiBali}`,
