@@ -43,7 +43,7 @@ function ComponentFourLanding() {
   return (
     <>
       <div
-        className="w-full h-screen flex 2xl:pr-20 flex-col pl-36 pt-20 pb-20"
+        className="w-full h-screen flex 2xl:pr-20 flex-col md:pl-36 es:pl-8 pt-20 pb-20"
         style={{
           backgroundImage: `url(${imageAsset.bgCandiBorobudur})`,
           backgroundPosition: "center",
@@ -52,11 +52,11 @@ function ComponentFourLanding() {
           objectFit: "cover",
         }}
       >
-        <div className="text-basicColor font-poppins text-[45px] font-bold">
+        <div className="text-basicColor font-poppins lg:text-[45px] md:text-[35px] es:text-[25px] font-bold">
           Sederet Kebudayaan <br />
           Indonesia yang Mendunia
         </div>
-        <div className="text-zinc-300 font-poppins text-base font-regular mt-10">
+        <div className="text-zinc-300 font-poppins lg:text-base sm:text-sm es:text-sm font-regular mt-10">
           <span className="font-semibold font-poppins text-basicColor">
             Indonesia{" "}
           </span>{" "}
@@ -68,14 +68,16 @@ function ComponentFourLanding() {
           terlepas dari keunikannya yang syarat akan nilai-nilai tradisi dan
           leluhur nenek moyang.
         </div>
-        <div className="w-full 2xl:w-full h-auto flex flex-row mt-12 gap-6 2xl:gap-5 xl:gap-5">
+        <div className="w-full 2xl:w-full h-auto flex md:flex-row es:flex-col mt-12 gap-6 2xl:gap-5 xl:gap-5">
           {clickedCards.map((isClicked, index) => (
             <div
               key={index}
-              className={` ${isClicked ? "custom-width-45" : "custom-width-10"}
+              className={` ${isClicked ? "md:custom-width-45 es:w-11/12" : "md:custom-width-10 es:w-11/12"}
                flex flex-col justify-${isClicked ? "end" : "evenly"} items-${
                 isClicked ? "start" : "center"
-              } bg-darkColor   rounded-3xl h-[480px] xl:h-[400px] 2xl:h-[480px] lg:h-[380px]  `}
+              } bg-darkColor   rounded-3xl
+              ${isClicked? "xl:h-[400px] 2xl:h-[480px] md:h-[380px] es:h-[150px] " : "xl:h-[400px] 2xl:h-[480px] md:h-[380px] es:h-[50px] "}
+                `}
               onClick={() => handleCardClick(index)}
               style={{
                 backgroundImage: `url(${images[index]})`,
@@ -87,19 +89,23 @@ function ComponentFourLanding() {
             >
               {isClicked ? (
                 <>
-                  <div className="w-72 h-12 ml-10 text-stone-100 text-4xl font-semibold font-['Poppins'] mb-5 leading-10">
+                  <div className=" ml-10 text-stone-100 lg:text-4xl md:text-3xl sm:text-xl es:text-lg font-semibold font-['Poppins'] md:mb-5 es:mb-0 leading-10">
                     {titles[index]}
                   </div>
-                  <div className="w-full 2xl:w-auto xl:w-auto h-auto pr-20 mb-16 ml-10 text-justify text-zinc-300 2xl:text-sm xl:text-sm   text-base font-medium font-['Poppins'] leading-relaxed">
+                  <div className="w-full 2xl:w-auto xl:w-auto h-auto md:pr-20 es:px-4 md:mb-16 es:mb-0 md:ml-10 es:ml-0 text-justify text-zinc-300 2xl:text-sm xl:text-sm   lg:text-base sm:text-xs es:text-[10px] font-medium font-['Poppins'] leading-relaxed">
                     {descriptions[index]}
                   </div>
                 </>
               ) : (
                 <>
-                  <div className="w-48 h-px -rotate-90 border-2 border-stone-100 rounded-xl"></div>
-                  <div className="w-52 h-10 -rotate-90 text-stone-100 text-2xl font-medium font-['Poppins'] leading-7">
+                <div className="h-full w-full flex es:flex-row-reverse md:flex-col md:justify-evenly es:justify-around  es:items-center">
+                <div className="md:w-48 md:h-px es:h-px es:w-40 md:-rotate-90 es:rotate-0 border-2 border-stone-100 rounded-xl"></div>
+                  <div className="md:w-52 md:h-10 md:-rotate-90 es:rotate-0 text-stone-100 xl:text-2xl md:text-xl es:text-sm  font-medium font-['Poppins'] leading-7">
                     {titles[index]}
                   </div>
+
+                </div>
+                 
                 </>
               )}
             </div>
