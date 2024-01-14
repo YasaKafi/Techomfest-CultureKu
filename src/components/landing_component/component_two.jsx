@@ -1,9 +1,8 @@
-import React from "react";
+import React,{forwardRef} from "react";
 import imageAsset from "../../utils/image";
-import CustomButton from "../../global_components/custom_button";
 import InformationCard from "../common_component/card_info_landing_page";
 
-function ComponentTwoLanding() {
+function ComponentTwoLanding(props, ref) {
   return (
     <>
       <div className=" w-full h-auto pt-20 mt-20 flex flex-col items-center justify-center bg-darkColor">
@@ -17,11 +16,12 @@ function ComponentTwoLanding() {
                 <div
                   className={`w-52 h-12 absolute bg-secondaryColor rounded-3xl`}
                 />
-                <div
+                <button ref={ref} 
                   className={`w-52 h-12 absolute text-basicColor text-base font-medium font-poppins leading-none flex justify-center items-center`}
                 >
-                  Jelajahi Sekarang
-                </div>
+                  <a href="/pustaka-budaya">Jelajahi Sekarang</a>
+                  
+                </button>
               </div>
         </div>
 
@@ -48,4 +48,4 @@ function ComponentTwoLanding() {
   );
 }
 
-export default ComponentTwoLanding;
+export default forwardRef(ComponentTwoLanding);
