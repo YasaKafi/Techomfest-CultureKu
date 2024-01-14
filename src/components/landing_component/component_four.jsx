@@ -75,7 +75,7 @@ function ComponentFourLanding() {
               className={` ${isClicked ? "md:custom-width-45 es:w-11/12" : "md:custom-width-10 es:w-11/12"}
                flex flex-col justify-${isClicked ? "end" : "evenly"} items-${
                 isClicked ? "start" : "center"
-              } bg-darkColor   rounded-3xl
+              } bg-darkColor   rounded-3xl transition-width duration-300
               ${isClicked? "xl:h-[400px] 2xl:h-[480px] md:h-[380px] es:h-[150px] " : "xl:h-[400px] 2xl:h-[480px] md:h-[380px] es:h-[50px] "}
                 `}
               onClick={() => handleCardClick(index)}
@@ -92,7 +92,7 @@ function ComponentFourLanding() {
                   <div className=" ml-10 text-stone-100 lg:text-4xl md:text-3xl sm:text-xl es:text-lg font-semibold font-['Poppins'] md:mb-5 es:mb-0 leading-10">
                     {titles[index]}
                   </div>
-                  <div className="w-full 2xl:w-auto xl:w-auto h-auto md:pr-20 es:px-4 md:mb-16 es:mb-0 md:ml-10 es:ml-0 text-justify text-zinc-300 2xl:text-sm xl:text-sm   lg:text-base sm:text-xs es:text-[10px] font-medium font-['Poppins'] leading-relaxed">
+                  <div className="w-full 2xl:w-auto xl:w-auto h-auto md:pr-20 es:px-4 md:mb-16 es:mb-0 md:ml-6 es:ml-0 text-justify text-zinc-300 2xl:text-sm xl:text-sm   lg:text-base sm:text-xs es:text-[10px] font-medium font-['Poppins'] leading-relaxed">
                     {descriptions[index]}
                   </div>
                 </>
