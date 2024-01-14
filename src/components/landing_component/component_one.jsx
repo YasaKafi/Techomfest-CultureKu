@@ -1,8 +1,8 @@
 import React from "react";
 import imageAsset from "../../utils/image";
-import CustomButton from "../../global_components/custom_button";
 
-function ComponentOneLanding() {
+
+function ComponentOneLanding({handleClick}) {
   return (
     <>
       <div className="  w-full h-screen  lg:pt-32 es:pt-16  ">
@@ -17,9 +17,7 @@ function ComponentOneLanding() {
           <div>
             <div className="pr-10 pl-10 pt-6 xl:text-4xl lg:text-3xl md:text-3xl sm:text-3xl es:text-xl font-regular font-poppins text-stone-100 ">
               Penasaran dengan budaya{" "}
-              <span className="font-semibold  font-poppins">
-                Indonesia?{" "}
-              </span>
+              <span className="font-semibold  font-poppins">Indonesia? </span>
             </div>
             <div className=" pb-6 pr-10 pl-10 mt-2 md:text-sm es:text-xs font-regular font-poppins text-stone-100">
               Jelajahi CultureKu untuk melihat secara luas budaya - budaya di
@@ -48,30 +46,29 @@ function ComponentOneLanding() {
               keberagaman yang membanggakan.
             </div>
             <div className="lg:mt-40 es:mt-8 lg:pb-0 es:pb-8">
-              <div className="w-52 h-12 z-10 relative">
+              <div className="w-52 h-12 z-10 cursor-pointer relative">
                 <div
                   className={`w-52 h-12 absolute bg-darkColor rounded-3xl`}
                 />
-                <div
+                <button onClick={handleClick}
                   className={`w-52 h-12 absolute text-basicColor text-base font-medium font-poppins leading-none flex justify-center items-center`}
                 >
                   Jelajahi Sekarang
-                </div>
+                </button>
               </div>
             </div>
           </div>
           <div className="lg:w-3/5 es:w-full lg:h-screen es:h-1/4  flex flex-row gap-5">
-            <div className="lg:custom-width-45  lg:h-2/3 es:w-1/2 es:h-1/2  lg:ml-10 es:ml-0 ">
+            <div className="lg:w-[45%]  lg:h-2/3 es:w-1/2 es:h-1/2  lg:ml-10 es:ml-0 ">
               <img
                 src={imageAsset.TariKecak}
                 alt=""
                 className="h-full w-full object-cover lg:rounded-[30px] es:rounded-l-none es:rounded-r-[30px]"
-                
               />
             </div>
 
             <div
-              className="lg:custom-width-225 lg:h-2/3 es:w-1/4  rounded-[30px] "
+              className="lg:w-[22.5%] lg:h-2/3 es:w-1/4  rounded-[30px] "
               style={{
                 backgroundImage: `url(${imageAsset.PatungCandi})`,
 
@@ -82,10 +79,10 @@ function ComponentOneLanding() {
             ></div>
 
             <div
-              className="lg:custom-width-225 lg:h-2/3 es:w-1/4  lg:rounded-[30px] es:rounded-r-none es:rounded-l-[30px] lg:mr-10 es:mr-0"
+              className="lg:w-[22.5%] lg:h-2/3 es:w-1/4  lg:rounded-[30px] es:rounded-r-none es:rounded-l-[30px] lg:mr-10 es:mr-0"
               style={{
                 backgroundImage: `url(${imageAsset.TradisiBali})`,
-                
+
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -99,3 +96,4 @@ function ComponentOneLanding() {
 }
 
 export default ComponentOneLanding;
+

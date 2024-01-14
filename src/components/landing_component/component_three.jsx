@@ -12,8 +12,8 @@ function ComponentThreeLanding() {
               Menarik!
             </div>
           </div>
-          <div className="lg:w-3/4 es:w-11/12 h-[350px] relative mt-20 ">
-            <div className="w-full h-[350px] left-0 top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow"
+          <div className="lg:w-3/4 es:w-11/12 h-[350px] relative mt-20 hover:scale-105 transition-transform duration-300 ">
+            <div className="w-full h-[350px] left-0 top-0 absolute bg-gradient-to-b from-black to-black rounded-[30px] shadow "
             style={{
                 backgroundImage: `url(${imageAsset.bgPapua})`,
                 backgroundPosition: "center",

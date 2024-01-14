@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import NavBar from "../global_components/navbar";
 import ComponentOneLanding from "../components/landing_component/component_one";
 import ComponentTwoLanding from "../components/landing_component/component_two";
@@ -10,6 +10,11 @@ import apiService from '../services/apiService';
 function LandingPage() {
 
   const [provinsiData, setProvinsiData] = useState([]);
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,8 +35,8 @@ function LandingPage() {
     <>
       <div className="bg-basicColor">
         <NavBar provinsiData={provinsiData}/>
-        <ComponentOneLanding />
-        <ComponentTwoLanding />
+        <ComponentOneLanding handleClick={handleClick}/>
+        <ComponentTwoLanding  ref={ref}/>
         <ComponentThreeLanding />
         <ComponentFourLanding />
         <FooterComponent />
