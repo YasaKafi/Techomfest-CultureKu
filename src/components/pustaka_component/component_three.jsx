@@ -34,6 +34,7 @@ function ComponentThreePustaka() {
           </div>
 
           <button className="w-full pr-32 flex justify-end items-end">
+            {/* GANTI SESUAI ID KALIMANTAN TIMUR VIKKKKKKKKK */}
           <a href="/detail-page/3">
             <div className="w-72 h-16 z-10 mt-10 bg-darkColor  flex flex-row justify-evenly items-center rounded-[40px] ">
               <div className="text-stone-100 lg:text-xl es:text-base font-semibold font-['Poppins'] leading-tight">

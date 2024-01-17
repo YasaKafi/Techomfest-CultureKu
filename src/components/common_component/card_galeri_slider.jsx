@@ -7,7 +7,7 @@ import imgaeAsset from "../../utils/image";
 const GaleriSlider = (props) => {
   const { rtl, budayaData } = props;
   const settings = {
-    dots: true,
+    dots: false,
     rtl: rtl,
     infinite: true,
     speed: 1000,
