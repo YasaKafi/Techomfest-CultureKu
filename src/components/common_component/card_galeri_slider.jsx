@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import imgaeAsset from "../../utils/image";
+import imageAsset from "../../utils/image";
 
 const GaleriSlider = (props) => {
   const { rtl, budayaData } = props;

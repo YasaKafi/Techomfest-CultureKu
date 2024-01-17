@@ -56,7 +56,7 @@ const icFacebook = "/assets/icons/icFacebook.svg";
 const icTwitter = "/assets/icons/icTwitter.svg";
 const icFilter = "/assets/icons/icFilter.svg";
 
-const imgaeAsset ={
+const imageAsset ={
     TariKecak,
     PatungCandi,
     TradisiBali,
@@ -114,4 +114,4 @@ const imgaeAsset ={
     TariSerimpi,
 }
 
-export default imgaeAsset;
+export default imageAsset;
