@@ -4,7 +4,7 @@ import imageAsset from "../../utils/image";
 function ComponentOneDetail ({namaProvinsi,deskripsiProvinsi,imageHeroOne,imageHeroTwo,imageHeroThree}){
     return(
         <>
-            <div className="  w-full   pt-32  ">
+            <div className=" w-full pt-32  ">
             <div className="absolute top-52 left-0 lg:flex es:hidden ">
           <img
             src={imageAsset.bgPetaSumatera}
