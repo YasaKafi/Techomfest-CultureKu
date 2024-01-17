@@ -12,9 +12,37 @@ import CardSlider from "../common_component/card_slider_pustaka_page";
 import imageAsset from "../../utils/image";
 
 function ComponentFourPustaka() {
+
+  const cardData = [
+    {
+      name: "Tari Piring",
+      asal: "Minangkabau, Sumatera Barat",
+      desc: "Tari Piring adalah tarian tradisional Indonesia yang berasal dari Minangkabau, Sumatera Barat. Dalam tarian ini, penari membawakan piring-piring yang ditempatkan di atas telapak tangannya dengan berbagai gerakan dinamis.",
+      images: imageAsset.TariPiring,
+    },
+    {
+      name: "Tari Kecak",
+      asal: "Bali, Indonesia",
+      desc: "Tari Kecak adalah pertunjukan dramatari seni khas Bali yang lebih utama menceritakan mengenai Ramayana dan dimainkan terutama oleh laki-laki.",
+      images: imageAsset.TariKecak,
+    },
+    {
+      name: "Tari Saman",
+      asal: "Aceh, Indonesia",
+      desc: "Tari Saman merupakan salah satu media untuk menyampaikan pesan atau dakwah. Tarian ini mencerminkan pendidikan, keagamaan, sopan santun, kepahlawanan, kekompakan dan kebersamaan.",
+      images: imageAsset.TariSaman,
+    },
+    {
+      name: "Tari Serimpi",
+      asal: "Jawa Tengah, Indonesia",
+      desc: "Tari Serimpi merupakan tarian Jawa klasik yang sudah ada sejak zaman kerajaan. Tarian ini terkenal memiliki gerak yang sangat halus dan cerita yang mengandung nilai simbolis.",
+      images: imageAsset.TariSerimpi,
+    },
+  ];
+
   return (
     <>
-      <div className="w-full h-screen relative flex flex-col pt-20 items-center">
+      <div className="w-full h-screen relative flex flex-col pt-20 font-poppins items-center">
         <div className="absolute -bottom-72 right-48 overflow-hidden lg:flex es:hidden  ">
           <img
             src={imageAsset.bgPetaIndonesia2}
@@ -29,15 +57,14 @@ function ComponentFourPustaka() {
           Indonesia memiliki beragam kebudayaan, mulai dari sabang sampai
           merauke
         </div>
-        <div className="w-full custom-height-60  pt-16">
+        <div className="w-full h-[60%]  pt-16">
           <Swiper
-          breakpoints={{
-            768: {
-              spaceBetween: 50,
-            },
-          }}
+            breakpoints={{
+              768: {
+                spaceBetween: 50,
+              },
+            }}
             autoplay={true}
-           
             effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
@@ -58,51 +85,20 @@ function ComponentFourPustaka() {
             modules={[Pagination, Navigation, EffectCoverflow]}
             className="w-full  h-full relative"
           >
-            <SwiperSlide
-              data-swiper-autoplay="2000"
-              className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
-            >
-              <CardSlider
-                name="Tari Piring"
-                asal="Minangkabau, Sumatera Barat"
-                desc="Tari Piring adalah tarian tradisional Indonesia yang berasal dari Minangkabau, Sumatera Barat. Dalam tarian ini, penari membawakan piring-piring yang ditempatkan di atas telapak tangannya dengan berbagai gerakan dinamis."
-                images={imageAsset.TariPiring} // Ganti dengan sumber gambar yang sesuai
-              />
-            </SwiperSlide>
-            <SwiperSlide
-              data-swiper-autoplay="2000"
-              className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
-            >
-              <CardSlider
-                name="Tari Kecak"
-                asal="Bali, Indonesia"
-                desc="Tarian ini terkenal karena penggunaan vokal ( cak ) yang berulang-ulang oleh para penari laki-laki yang duduk bersila dalam formasi lingkaran. Biasanya, tarian ini menggambarkan cerita Ramayana, sebuah kisah epik dari mitologi Hindu. Kecak sering dimainkan dalam upacara keagamaan di Bali, namun juga menjadi atraksi turis yang populer."
-                images={imageAsset.TariKecak} // Ganti dengan sumber gambar yang sesuai
-              />
-            </SwiperSlide>
-            <SwiperSlide
-              data-swiper-autoplay="2000"
-              className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
-            >
-             <CardSlider
-                name="Tari Saman"
-                asal="Aceh, Indonesia"
-                desc="Tarian ini dilakukan dalam kelompok besar di mana para penari duduk berbaris dan mengeksekusi gerakan-gerakan tangan, tubuh, dan kepala yang terkoordinasi dengan cepat. Musik dan nyanyian juga menjadi bagian integral dari tarian ini. Awalnya, Saman adalah bagian dari tradisi yang dilakukan dalam upacara adat, namun sekarang menjadi tarian yang sering ditampilkan dalam berbagai acara budaya."
-                images={imageAsset.TariSaman} // Ganti dengan sumber gambar yang sesuai
-              />
-            </SwiperSlide>
-            <SwiperSlide
-              data-swiper-autoplay="2000"
-              className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
-            >
-              <CardSlider
-                name="Tari Serimpi"
-                asal="Jawa Tengah, Indonesia"
-                desc="Tarian ini merupakan tarian keraton Jawa yang anggun dan elegan, biasanya dipentaskan oleh dua penari wanita yang mengenakan kostum tradisional Jawa yang indah. Gerakan yang lemah lembut dan anggun dalam tarian ini menggambarkan kehalusan dan keanggunan, sering kali menjadi bagian dari upacara keagamaan, perayaan kerajaan, atau pentas seni budaya. Tarian ini juga menjadi simbol keindahan dan keanggunan tradisi Jawa."
-                images={imageAsset.TariSerimpi} // Ganti dengan sumber gambar yang sesuai
-              />
-            </SwiperSlide>
-
+            {cardData.map((card, index) => (
+              <SwiperSlide
+                key={index}
+                data-swiper-autoplay="2000"
+                className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
+              >
+                <CardSlider
+                  name={card.name}
+                  asal={card.asal}
+                  desc={card.desc}
+                  images={card.images}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

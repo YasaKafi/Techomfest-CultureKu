@@ -2,7 +2,7 @@ import React from "react";
 import imageAsset from "../../utils/image";
 import { RiSearchLine } from "react-icons/ri";
 
-function ComponentOnePustaka() {
+function ComponentOnePustaka({handleClick}) {
     return (
       <div className="w-full relative font-poppins text-center">
         <div className="flex items-center justify-center">
@@ -50,9 +50,9 @@ function ComponentOnePustaka() {
               Pulau Sulawesi dan Kalimantan juga memiliki fakta menarik lho
             </div>
           </div>
-          <div className="text-basicColor bg-secondaryColor rounded-full lg:px-8 es:px-6 lg:py-5 es:py-3 lg:mt-0 es:mt-4 lg:mb-4 es:mb-4 font-semibold ">
+          <button onClick={handleClick} className="text-basicColor bg-secondaryColor rounded-full lg:px-8 es:px-6 lg:py-5 es:py-3 lg:mt-0 es:mt-4 lg:mb-4 es:mb-4 font-semibold ">
             Cek Yuk!
-          </div>
+          </button>
         </div>
       </div>
     );

@@ -14,13 +14,13 @@ const CardSlider = ({name, asal, desc,images} ) => {
                     backgroundSize: "cover",
                   }}
                 />
-                <div className="w-40 h-10 lg:left-[81px] es:left-5 top-[70px] absolute text-stone-100 lg:text-3xl es:text-xl font-bold font-['Poppins'] leading-loose">
+                <div className=" h-10 lg:left-[81px] es:left-5 top-[70px] absolute text-stone-100 lg:text-3xl es:text-xl font-bold font-['Poppins'] leading-loose">
                   {name}
                 </div>
                 <div className="w-72 h-5 lg:left-[81px] es:left-5 top-[120px] absolute text-stone-100 lg:text-lg es:text-xs font-semibold font-['Poppins'] leading-tight">
                   {asal}
                 </div>
-                <div className="w-4/5 lg:text-base es:text-[10px]  text-basicColor  lg:custom-top-70 es:top-1/2 mr-24 lg:ml-20 es:ml-5 es:pb-8 lg:pb-0 absolute text-center">
+                <div className="w-4/5 lg:text-sm es:text-[10px]  text-basicColor  lg:top-[70%] es:top-1/2 mr-24 lg:ml-20 es:ml-5 es:pb-8 lg:pb-0 absolute text-center">
                   {/* <span className="font-semibold text-lg font-poppins">
                     {" "}
                   </span>{" "} */}

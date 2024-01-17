@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import imageAsset from "../../utils/image";
 import { HiChevronRight } from "react-icons/hi";
 
-function ComponentTwoPustaka() {
+function ComponentTwoPustaka(props,ref) {
   return (
     <>
       <div className="w-full h-auto mt-20 lg:pb-40 es:pb-10 flex lg:flex-row es:flex-col">
@@ -17,9 +17,9 @@ function ComponentTwoPustaka() {
                 backgroundSize: "cover",
               }}
             />
-            <div className="w-full lg:h-60 es:h-48 left-0 bottom-0 mb-12 ml-12 absolute 2xl:text-xl xl:text-xl es:text-base   -rotate-90 text-stone-100 text-2xl font-semibold font-['Poppins'] leading-relaxed">
+            <button ref={ref} className="w-full lg:h-60 es:h-48 left-0 bottom-0 mb-12 ml-12 absolute 2xl:text-xl xl:text-xl es:text-base   -rotate-90 text-stone-100 text-2xl font-semibold font-['Poppins'] leading-relaxed">
               Sulawesi Selatan
-            </div>
+            </button>
           </div>
           <div className="w-3/4 h-[350px] lg:-left-14 es:right-0 z-10 relative mt-20">
             <div
@@ -83,4 +83,4 @@ function ComponentTwoPustaka() {
   );
 }
 
-export default ComponentTwoPustaka;
+export default forwardRef(ComponentTwoPustaka);
