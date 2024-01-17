@@ -6,7 +6,7 @@ function ComponentThreePustaka() {
   return (
     <>
       <div className="w-full h-auto  lg:pb-40 es:pb-0 flex lg:flex-row es:flex-col-reverse">
-        <div className="lg:w-2/4 lg:pl-0 es:pl-8 es:w-full  lg:pt-20 es:pt-0 flex flex-col">
+        <div className="lg:w-2/4  lg:pl-14 es:pl-8 es:w-full  lg:pt-20 es:pt-0 flex flex-col">
           <div className="lg:text-lg es:text-sm font-poppins mr-36 mt-24 font-regular">
             Kalimantan Timur
           </div>
@@ -33,16 +33,19 @@ function ComponentThreePustaka() {
             Hindu-Buddha.
           </div>
 
-          <div className="w-full pr-32 flex justify-end items-end">
+          <button className="w-full pr-32 flex justify-end items-end">
+            {/* GANTI SESUAI ID KALIMANTAN TIMUR VIKKKKKKKKK */}
+          <a href="/detail-page/3">
             <div className="w-72 h-16 z-10 mt-10 bg-darkColor  flex flex-row justify-evenly items-center rounded-[40px] ">
               <div className="text-stone-100 lg:text-xl es:text-base font-semibold font-['Poppins'] leading-tight">
-                Sulawesi Selatan
+              Kalimantan Timur
               </div>
               <div className="text-stone-100 text-xl ">
                 <HiChevronRight size={30} />
               </div>
             </div>
-          </div>
+            </a>
+          </button>
         </div>
         <div className="lg:w-2/4 es:w-full lg:pt-20 es:pt-0 flex flex-row">
           <div className="w-4/5 h-[350px] lg:-right-5 es:left-0 z-10 relative mt-20">

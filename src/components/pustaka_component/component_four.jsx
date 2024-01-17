@@ -14,7 +14,7 @@ import imageAsset from "../../utils/image";
 function ComponentFourPustaka({ budayaData }) {
   return (
     <>
-      <div className="w-full h-screen relative flex flex-col pt-20 items-center">
+      <div className="w-full h-screen relative flex flex-col pt-20 font-poppins items-center">
         <div className="absolute -bottom-72 right-48 overflow-hidden lg:flex es:hidden  ">
           <img
             src={imageAsset.bgPetaIndonesia2}
@@ -29,15 +29,14 @@ function ComponentFourPustaka({ budayaData }) {
           Indonesia memiliki beragam kebudayaan, mulai dari sabang sampai
           merauke
         </div>
-        <div className="w-full custom-height-60  pt-16">
+        <div className="w-full h-[60%]  pt-16">
           <Swiper
-          breakpoints={{
-            768: {
-              spaceBetween: 50,
-            },
-          }}
+            breakpoints={{
+              768: {
+                spaceBetween: 50,
+              },
+            }}
             autoplay={true}
-           
             effect="coverflow"
             grabCursor={true}
             centeredSlides={true}

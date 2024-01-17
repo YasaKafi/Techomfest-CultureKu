@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 
 import ComponentTwoPustaka from "../components/pustaka_component/component_two";
 import NavBar from "../global_components/navbar";
@@ -7,17 +7,24 @@ import ComponentThreePustaka from "../components/pustaka_component/component_thr
 import ComponentFourPustaka from "../components/pustaka_component/component_four";
 import ComponentFivePustaka from "../components/pustaka_component/component_five";
 import FooterComponent from "../global_components/footer";
+import CardSearchBudaya from "../components/common_component/card_search_budaya";
 
 function PustakaBudayaPage({ provinsiData, budayaData }) {
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
       <div className="bg-basicColor">
         <NavBar provinsiData={provinsiData}/>
-        <ComponentOnePustaka/>
-        <ComponentTwoPustaka/>
+        <ComponentOnePustaka handleClick={handleClick}/>
+        <ComponentTwoPustaka ref={ref}/>
         <ComponentThreePustaka/>
         <ComponentFourPustaka budayaData={budayaData}/>
         <ComponentFivePustaka budayaData={budayaData}/>
+        {/* <CardSearchBudaya/> */}
         <FooterComponent/>
       </div>
     </>
