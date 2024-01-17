@@ -42,6 +42,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage provinsiData={provinsiData}/>}/>
+        <Route path="/pustaka-budaya" element={<PustakaBudayaPage provinsiData={provinsiData} budayaData={budayaData}/>}/>
         <Route path="/pustaka-budaya" element={<PustakaBudayaPage provinsiData={provinsiData}/>}/>
         <Route path="/detail-page/:id" element={<DetailPage provinsiData={provinsiData} budayaData={budayaData} />} />
         <Route path="/historiografi-page" element={<HistoriografiPage provinsiData={provinsiData}/>}/>

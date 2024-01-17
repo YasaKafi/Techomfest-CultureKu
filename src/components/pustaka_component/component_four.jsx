@@ -11,35 +11,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import CardSlider from "../common_component/card_slider_pustaka_page";
 import imageAsset from "../../utils/image";
 
-function ComponentFourPustaka() {
-
-  const cardData = [
-    {
-      name: "Tari Piring",
-      asal: "Minangkabau, Sumatera Barat",
-      desc: "Tari Piring adalah tarian tradisional Indonesia yang berasal dari Minangkabau, Sumatera Barat. Dalam tarian ini, penari membawakan piring-piring yang ditempatkan di atas telapak tangannya dengan berbagai gerakan dinamis.",
-      images: imageAsset.TariPiring,
-    },
-    {
-      name: "Tari Kecak",
-      asal: "Bali, Indonesia",
-      desc: "Tari Kecak adalah pertunjukan dramatari seni khas Bali yang lebih utama menceritakan mengenai Ramayana dan dimainkan terutama oleh laki-laki.",
-      images: imageAsset.TariKecak,
-    },
-    {
-      name: "Tari Saman",
-      asal: "Aceh, Indonesia",
-      desc: "Tari Saman merupakan salah satu media untuk menyampaikan pesan atau dakwah. Tarian ini mencerminkan pendidikan, keagamaan, sopan santun, kepahlawanan, kekompakan dan kebersamaan.",
-      images: imageAsset.TariSaman,
-    },
-    {
-      name: "Tari Serimpi",
-      asal: "Jawa Tengah, Indonesia",
-      desc: "Tari Serimpi merupakan tarian Jawa klasik yang sudah ada sejak zaman kerajaan. Tarian ini terkenal memiliki gerak yang sangat halus dan cerita yang mengandung nilai simbolis.",
-      images: imageAsset.TariSerimpi,
-    },
-  ];
-
+function ComponentFourPustaka({ budayaData }) {
   return (
     <>
       <div className="w-full h-screen relative flex flex-col pt-20 font-poppins items-center">
@@ -85,17 +57,17 @@ function ComponentFourPustaka() {
             modules={[Pagination, Navigation, EffectCoverflow]}
             className="w-full  h-full relative"
           >
-            {cardData.map((card, index) => (
+            {budayaData.map((item, index) => (
               <SwiperSlide
                 key={index}
                 data-swiper-autoplay="2000"
                 className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
               >
                 <CardSlider
-                  name={card.name}
-                  asal={card.asal}
-                  desc={card.desc}
-                  images={card.images}
+                  name={item.nama_budaya}
+                  images={item.image_budaya}
+                  asal={item.asal_budaya}
+                  desc={item.deskripsi_budaya}
                 />
               </SwiperSlide>
             ))}

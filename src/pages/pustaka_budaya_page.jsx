@@ -8,7 +8,7 @@ import ComponentFourPustaka from "../components/pustaka_component/component_four
 import ComponentFivePustaka from "../components/pustaka_component/component_five";
 import FooterComponent from "../global_components/footer";
 
-function PustakaBudayaPage({ provinsiData }) {
+function PustakaBudayaPage({ provinsiData, budayaData }) {
   const ref = useRef(null);
 
   const handleClick = () => {
@@ -21,8 +21,8 @@ function PustakaBudayaPage({ provinsiData }) {
         <ComponentOnePustaka handleClick={handleClick}/>
         <ComponentTwoPustaka ref={ref}/>
         <ComponentThreePustaka/>
-        <ComponentFourPustaka/>
-        <ComponentFivePustaka/>
+        <ComponentFourPustaka budayaData={budayaData}/>
+        <ComponentFivePustaka budayaData={budayaData}/>
         <FooterComponent/>
       </div>
     </>
