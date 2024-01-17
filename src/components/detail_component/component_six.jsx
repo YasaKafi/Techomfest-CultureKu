@@ -1,14 +1,14 @@
 import React from "react";
 import imageAsset from "../../utils/image";
 
-function ComponentSixDetail() {
+function ComponentSixDetail({namaBudaya, deskripsiBudaya, imageBudaya, imageSide}) {
   return (
     <>
       <div className="w-full h-screen flex flex-col relative">
         
         <div className="absolute es:left-8 lg:left-auto lg: top-32 right-[550px] lg:w-1/5 es:w-2/5  lg:h-3/5 sm:h-2/5 es:custom-height-30 2xl:right-[550px] xl:right-[450px] lg:right-[350px] ">
           <img
-            src={imageAsset.adatAceh}
+            src={imageBudaya}
             alt=""
             className="w-full h-full object-cover rounded-[30px]"
             style={{
@@ -19,7 +19,7 @@ function ComponentSixDetail() {
         </div>
         <div className="absolute es:top-32 es:right-8 lg:top-64 right-28 lg:w-1/5 es:w-2/5 lg:h-3/5 es:custom-height-30 sm:h-2/5 lg:right-20">
           <img
-            src={imageAsset.adatAceh}
+            src={imageSide}
             alt=""
             className="w-full h-full object-cover rounded-[30px]"
             style={{

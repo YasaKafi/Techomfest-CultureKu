@@ -6,11 +6,11 @@ import ComponentThreeHistoriografi from "../components/historiografi_component/c
 import ComponentFourHistoriografi from "../components/historiografi_component/component_four";
 import FooterComponent from "../global_components/footer";
 
-function HistoriografiPage() {
+function HistoriografiPage({ provinsiData }) {
   return (
     <>
         <div className="bg-basicColor">
-            <NavBar/>
+            <NavBar provinsiData={provinsiData}/>
             <ComponentOneHistoriografi/>
             <ComponentTwoHistoriografi/>
             <ComponentThreeHistoriografi/>

@@ -10,7 +10,6 @@ const FooterComponent = () => {
                 <img 
                     src={imageAssets.icCulturKu} 
                     alt="" 
-                    srcset="" 
                 />
                 <p className="mt-4">codeslinger@gmail.com</p>
                 <p className="mt-4">+1 (201) 895-3801</p>

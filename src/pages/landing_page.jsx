@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import NavBar from "../global_components/navbar";
 import ComponentOneLanding from "../components/landing_component/component_one";
 import ComponentTwoLanding from "../components/landing_component/component_two";
@@ -10,6 +10,11 @@ import apiService from '../services/apiService';
 function LandingPage() {
 
   const [provinsiData, setProvinsiData] = useState([]);
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,19 +34,13 @@ function LandingPage() {
   return (
     <>
       <div className="bg-basicColor">
-        <NavBar />
-        <ComponentOneLanding />
-        <ComponentTwoLanding />
+        <NavBar provinsiData={provinsiData}/>
+        <ComponentOneLanding handleClick={handleClick}/>
+        <ComponentTwoLanding  ref={ref}/>
         <ComponentThreeLanding />
         <ComponentFourLanding />
         <FooterComponent />
-        {provinsiData.map(provinsi => (
-          <div key={provinsi.id_provinsi}>
-            <h2>{provinsi.nama_provinsi}</h2>
-            <p>Luas Teritorial: {provinsi.luas_teritorial}</p>
-            <p>Jumlah Penduduk: {provinsi.jumlah_penduduk}</p>
-          </div>
-        ))}
+        
       </div>
     </>
   );
