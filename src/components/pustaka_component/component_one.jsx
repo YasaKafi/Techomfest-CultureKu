@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import imageAsset from "../../utils/image";
 import { RiSearchLine } from "react-icons/ri";
-import CardSearchBudaya from "../common_component/card_search_budaya";
 import { IoMdAddCircle } from "react-icons/io";
 
 function ComponentOnePustaka({handleClick, budaya}) {
@@ -80,7 +79,7 @@ function ComponentOnePustaka({handleClick, budaya}) {
             placeholder="Cari Budayamu disini..."
             onChange={handleInputChange}
           />
-          <div className="ml-auto"></div>
+          
           <div
             className="ml-4 lg:flex es:hidden text-basicColor bg-premierColor rounded-full px-8 py-2 font-semibold"
             onClick={() => handleSuggestionClick(filteredBudaya[0].nama_budaya, filteredBudaya[0].image_budaya, filteredBudaya[0].deskripsi_budaya)}
@@ -88,7 +87,7 @@ function ComponentOnePustaka({handleClick, budaya}) {
             Temukan Provinsi
           </div>
           {filteredBudaya.length > 0 && inputValue != "" && (
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-basicColor border border-gray-300 shadow-md w-full">
+            <div className=" rounded-xl pl-6 text-left absolute top-full left-1/2 transform -translate-x-1/2 bg-basicColor border border-gray-300 shadow-md w-full">
               <ul className="max-h-40 overflow-y-auto">
                 {filteredBudaya.map((item, index) => (
                   <li
