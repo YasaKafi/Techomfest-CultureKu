@@ -8,7 +8,7 @@ import ComponentFourPustaka from "../components/pustaka_component/component_four
 import ComponentFivePustaka from "../components/pustaka_component/component_five";
 import FooterComponent from "../global_components/footer";
 
-function PustakaBudayaPage() {
+function PustakaBudayaPage({ budayaData }) {
   return (
     <>
       <div className="bg-basicColor">
@@ -16,8 +16,8 @@ function PustakaBudayaPage() {
         <ComponentOnePustaka/>
         <ComponentTwoPustaka/>
         <ComponentThreePustaka/>
-        <ComponentFourPustaka/>
-        <ComponentFivePustaka/>
+        <ComponentFourPustaka budayaData={budayaData}/>
+        <ComponentFivePustaka budayaData={budayaData}/>
         <FooterComponent/>
       </div>
     </>

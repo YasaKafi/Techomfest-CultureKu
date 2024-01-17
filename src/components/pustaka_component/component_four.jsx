@@ -67,8 +67,8 @@ function ComponentFourPustaka({ budayaData }) {
                 <CardSlider
                   name={item.nama_budaya}
                   images={item.image_budaya}
-                  desc={item.deskripsi_budaya}
                   asal={item.asal_budaya}
+                  desc={item.deskripsi_budaya}
                 />
               </SwiperSlide>
             ))}
