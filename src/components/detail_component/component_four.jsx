@@ -5,11 +5,10 @@ function ComponentFourDetail({namaBudaya, deskripsiBudaya, imageBudaya, imageSid
   return (
     <>
       <div className="w-full h-auto  lg:pb-40 es:pb-10 flex lg:flex-row es:flex-col-reverse">
-      <div className="lg:w-2/4 es:w-full lg:pl-0 es:pl-8 flex flex-col lg:items-start  justify-center">
+      <div className="lg:w-2/4 es:w-full lg:pl-12 es:pl-8 flex flex-col lg:items-start  justify-center">
             <div className="lg:text-[30px] es:text-[25px]  font-poppins mt-24 font-semibold">
               {namaBudaya}
             </div>
-
             <div className="text-base font-poppins lg:mr-36 es:mr-14 mt-6 font-regular">
               <span className="font-semibold text-base font-poppins ">
                 {namaBudaya}{" "}

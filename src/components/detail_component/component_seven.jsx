@@ -51,7 +51,7 @@ function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, im
               Senjata Daerah
             </div>
             <div className="font-regular text-lg lg:text-lg sm:text-sm es:text-xs es:text-center md:px-0 es:px-4">
-              Aceh memiliki sejata daerah juga lho, berikut beberapa senjata
+              {namaProvinsi} memiliki sejata daerah juga lho, berikut beberapa senjata
               daerahnya
             </div>
           </div>
