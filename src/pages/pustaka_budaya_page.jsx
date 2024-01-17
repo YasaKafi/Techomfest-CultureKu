@@ -19,12 +19,11 @@ function PustakaBudayaPage({ provinsiData, budayaData }) {
     <>
       <div className="bg-basicColor">
         <NavBar provinsiData={provinsiData}/>
-        <ComponentOnePustaka handleClick={handleClick}/>
+        <ComponentOnePustaka handleClick={handleClick} budaya={budayaData}/>
         <ComponentTwoPustaka ref={ref}/>
         <ComponentThreePustaka/>
         <ComponentFourPustaka budayaData={budayaData}/>
         <ComponentFivePustaka budayaData={budayaData}/>
-        {/* <CardSearchBudaya/> */}
         <FooterComponent/>
       </div>
     </>
