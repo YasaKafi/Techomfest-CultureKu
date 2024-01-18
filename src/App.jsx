@@ -9,6 +9,7 @@ import HistoriografiPage from "./pages/historiografi";
 
 function App() {
 
+  const [pulauData, setPulauData] = useState([]);
   const [provinsiData, setProvinsiData] = useState([]);
   const [budayaData, setBudayData] = useState([]);
 
@@ -38,14 +39,27 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await apiService.getPulauData();
+        setPulauData(data['data']);
+      } catch (error) {
+        console.error('Error fetching budaya data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage provinsiData={provinsiData}/>}/>
-        <Route path="/pustaka-budaya" element={<PustakaBudayaPage provinsiData={provinsiData} budayaData={budayaData}/>}/>
-        <Route path="/pustaka-budaya" element={<PustakaBudayaPage provinsiData={provinsiData}/>}/>
-        <Route path="/detail-page/:id" element={<DetailPage provinsiData={provinsiData} budayaData={budayaData} />} />
-        <Route path="/historiografi-page" element={<HistoriografiPage provinsiData={provinsiData}/>}/>
+        <Route path="/" element={<LandingPage provinsiData={provinsiData} pulauData={pulauData}/>}/>
+        <Route path="/pustaka-budaya" element={<PustakaBudayaPage provinsiData={provinsiData} budayaData={budayaData} pulauData={pulauData}/>}/>
+        <Route path="/pustaka-budaya" element={<PustakaBudayaPage provinsiData={provinsiData} pulauData={pulauData}/>}/>
+        <Route path="/detail-page/:id" element={<DetailPage provinsiData={provinsiData} budayaData={budayaData} pulauData={pulauData}/>} />
+        <Route path="/historiografi-page" element={<HistoriografiPage provinsiData={provinsiData} pulauData={pulauData}/>}/>
       </Routes>
 
     </Router>

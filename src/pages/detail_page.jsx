@@ -10,10 +10,9 @@ import ComponentSixDetail from "../components/detail_component/component_six";
 import ComponentSevenDetail from "../components/detail_component/component_seven";
 import FooterComponent from "../global_components/footer";
 
-function DetailPage({ provinsiData, budayaData }) {
-  const { id } = useParams(); // Gunakan useParams dari react-router-dom
+function DetailPage({ provinsiData, budayaData, pulauData }) {
+  const { id } = useParams();
 
-  // Cari provinsi sesuai ID dari provinsiDetailData
   const provinsi = provinsiData.find((prov) => prov.id_provinsi === parseInt(id, 10));
 
   const budayaTari = budayaData.filter((b) => b.id_provinsi === parseInt(id, 10) && b.id_jenis_budaya === 2);
@@ -21,16 +20,13 @@ function DetailPage({ provinsiData, budayaData }) {
   const budayaUpacara = budayaData.filter((b) => b.id_provinsi === parseInt(id, 10) && b.id_jenis_budaya === 4);
   const budayaSenjata = budayaData.filter((b) => b.id_provinsi === parseInt(id, 10) && b.id_jenis_budaya === 5);
 
-  console.log(budayaTari);
-
-  // Pastikan provinsi ditemukan
   if (!provinsi || budayaTari.length === 0 || budayaMakanan.length === 0 || budayaUpacara.length === 0 || budayaSenjata.length === 0) {
     return <div>Data tidak ditemukan</div>;
   }
   return (
     <>
       <div className="bg-basicColor ">
-        <NavBar provinsiData={provinsiData}/>
+        <NavBar provinsiData={provinsiData} pulauData={pulauData}/>
         <ComponentOneDetail 
             namaProvinsi={provinsi.nama_provinsi}
             deskripsiProvinsi={provinsi.deskripsi_provinsi}

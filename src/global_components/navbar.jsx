@@ -6,12 +6,18 @@ import { useLocation } from "react-router-dom";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-export default function NavBar({provinsiData}) {
+export default function NavBar({provinsiData, pulauData}) {
   const location = useLocation();
-  const namaProvinsiArray = provinsiData.map(provinsi => provinsi.nama_provinsi);
+  const namaProvinsiArray = provinsiData.map(provinsi => ({
+    id: provinsi.id_provinsi,
+    id_pulau: provinsi.id_pulau,
+    name: provinsi.nama_provinsi
+  }));
   const isActive = (path) => {
     return location.pathname === path ? "font-semibold" : "";
   };
+  const [inputValue, setInputValue] = useState("");
+  const [filteredProvinsi, setFilteredProvinsi] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -35,8 +41,16 @@ export default function NavBar({provinsiData}) {
     setDropdownOpen(!dropdownOpen);
   };
 
-  console.log(namaProvinsiArray);
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setInputValue(value);
 
+    const filtered = provinsiData.filter((item) =>
+      item.nama_provinsi.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredProvinsi(filtered);
+  };
+  
   return (
     <header className=" bg-basicColor shadow-md fixed top-0 left-0 right-0 z-50">
       <nav
@@ -62,15 +76,36 @@ export default function NavBar({provinsiData}) {
 
             <div className="absolute justify-center items-center flex flex-col top-1/2 left-1/2 w-full h-1/2 transform -translate-x-1/2 -translate-y-1/2  p-8 rounded font-poppins text-basicColor">
               <div className="font-semibold  sm:text-[30px] es:text-lg">
-                Kamu mau cari apa?
+                Kamu mau provinsi apa?
               </div>
               <div className="w-72 h-12 relative mt-5">
                 <div className="w-72 h-12 left-0 top-0 absolute bg-zinc-800 rounded-3xl border-2 border-zinc-100" />
-                <div className="w-56 h-5 left-[29px] top-[21px] absolute text-neutral-400 text-xs font-medium font-['Poppins'] leading-3">
-                  Contoh : “Tari Saman”
-                </div>
+                <input 
+                  type="text" 
+                  className="w-56 h-5 left-[25px] top-[15px] absolute bg-zinc-800 text-xs font-medium font-['Poppins'] leading-3"
+                  placeholder="Contoh : “Provinsi Jawa”"
+                  style={{ outline: "none" }}
+                  onChange={handleInputChange}
+                />
+                {filteredProvinsi.length > 0 && inputValue != "" && (
+                  <div className="rounded-xl text-left absolute top-full left-1/2 transform -translate-x-1/2 bg-zinc-800 border border-gray-300 shadow-md w-full">
+                    <ul className="max-h-40 overflow-y-auto">
+                      {filteredProvinsi.map((item, index) => (
+                        <a href={`/detail-page/${item.id_provinsi}`}>
+                          <li
+                            key={index}
+                            className="py-2 pl-5 cursor-pointer rounded-xl hover:bg-zinc-600"
+                            onClick={() => handleSuggestionClick(item.id_provinsi)}
+                          >
+                            {item.nama_provinsi}
+                          </li>
+                        </a>      
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <img
-                  className="w-5 h-5 left-[259px] top-[16px] absolute"
+                  className="w-5 h-5 left-[250px] top-[13px] absolute"
                   src={imageAssets.icSearch}
                 />
               </div>
@@ -90,18 +125,33 @@ export default function NavBar({provinsiData}) {
 
             <div className="absolute justify-start items-center flex  flex-col top-1/2 left-1/2 w-full mt-16  h-full  transform -translate-x-1/2 -translate-y-1/2  p-8 rounded font-poppins text-basicColor">
               <div className="w-full h-full flex flex-col ">
-                <div className="font-semibold  sm:text-[30px] es:text-lg text-center">
+                <div className="font-semibold sm:text-[30px] es:text-lg text-center">
                   Cari Provinsimu disini
                 </div>
-                <div className="w-full h-full es:flex mt-10 es:flex-col es:pb-10  lg:grid lg:grid-cols-2 lg:gap-4 xl:grid-cols-3 xl:gap-6 overflow-scroll">
-                  {namaProvinsiArray.map((provinsi, index) => (
-                    <Link
-                      className="{`text-lg leading-6 text-neutral-500 hover:text-green-600 px-4 py-2 rounded`}"
-                      key={index}
-                      to={`/detail-page/${index + 1}`}
-                    >
-                      {provinsi}
-                    </Link>
+                <div>
+                  
+                </div>
+                <div className="w-full h-full mt-10 overflow-scroll">
+                  {pulauData.map((pulau, index) => (
+                    <div key={index}> 
+                      <div className="font-semibold text-lg ml-4">
+                      Pulau {pulau.nama_pulau}
+                      </div>
+                      <div className="es:flex mt-5 es:flex-col es:pb-10 lg:grid lg:grid-cols-2 lg:gap-4 xl:grid-cols-3 xl:gap-6">
+                        {namaProvinsiArray
+                          .filter(provinsi => provinsi.id_pulau === pulau.id_pulau)
+                          .map((filteredProvinsi, index) => (
+                            <Link
+                              className="text-lg leading-6 text-neutral-500 hover:text-green-600 px-4 py-2 rounded"
+                              key={index}
+                              to={`/detail-page/${filteredProvinsi.id}`}
+                            >
+                              Provinsi {filteredProvinsi.name}
+                            </Link>
+                          ))
+                        }
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>

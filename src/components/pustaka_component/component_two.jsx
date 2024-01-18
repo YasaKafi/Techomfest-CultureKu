@@ -58,8 +58,7 @@ function ComponentTwoPustaka(props,ref) {
             mewah dan rumit, melibatkan rangkaian ritual dan perayaan yang
             berlangsung berhari-hari.
           </div>
-           {/* GANTI SESUAI ID SULAWESI SELATAN VIKKKKKKKKK */}
-          <a href="/detail-page/1">
+          <a href="/detail-page/27">
           <div className="w-full pr-32 flex justify-end items-end">
             <div className="w-72 h-16 z-10 mt-10 bg-darkColor  flex flex-row justify-evenly items-center rounded-[40px] ">
               <div className="text-stone-100 lg:text-xl es:text-base font-semibold font-['Poppins'] leading-tight">

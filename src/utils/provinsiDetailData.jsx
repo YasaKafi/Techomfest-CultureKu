@@ -1,5 +1,12 @@
 import axios from 'axios';
 
+const API_ENDPOINTS_PULAU = {
+  getDataPulau: 'https://techomfestculturekuapi.000webhostapp.com/api/pulau/show',
+  getDataPulauById: 'https://techomfestculturekuapi.000webhostapp.com/api/pulau/show/{id}',
+  postDataPulau: 'https://techomfestculturekuapi.000webhostapp.com/api/pulau/store',
+  deleteDataPulau: 'https://techomfestculturekuapi.000webhostapp.com/api/pulau/delete/{id}'
+};
+
 const API_ENDPOINTS_PROVINSI = {
   getDataBudaya: 'https://techomfestculturekuapi.000webhostapp.com/api/provinsi/show',
   getDataBudayaById: 'https://techomfestculturekuapi.000webhostapp.com/api/provinsi/show/{id}',
@@ -48,6 +55,16 @@ const apiService = {
       return response.data;
     } catch (error) {
       console.error('Error fetching budaya data:', error);
+      throw error;
+    }
+  },
+
+  getPulauData: async () => {
+    try {
+      const response = await axios.get(API_ENDPOINTS_PULAU.getDataPulau);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching pulau data:', error);
       throw error;
     }
   },

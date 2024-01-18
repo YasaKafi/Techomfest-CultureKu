@@ -9,7 +9,7 @@ import ComponentFivePustaka from "../components/pustaka_component/component_five
 import FooterComponent from "../global_components/footer";
 import CardSearchBudaya from "../components/common_component/card_search_budaya";
 
-function PustakaBudayaPage({ provinsiData, budayaData }) {
+function PustakaBudayaPage({ provinsiData, budayaData, pulauData }) {
   const ref = useRef(null);
 
   const handleClick = () => {
@@ -18,7 +18,7 @@ function PustakaBudayaPage({ provinsiData, budayaData }) {
   return (
     <>
       <div className="bg-basicColor">
-        <NavBar provinsiData={provinsiData}/>
+        <NavBar provinsiData={provinsiData} pulauData={pulauData}/>
         <ComponentOnePustaka handleClick={handleClick} budaya={budayaData}/>
         <ComponentTwoPustaka ref={ref}/>
         <ComponentThreePustaka/>
