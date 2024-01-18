@@ -4,6 +4,7 @@ import { RiSearchLine } from "react-icons/ri";
 import { IoMdAddCircle } from "react-icons/io";
 
 function ComponentOnePustaka({handleClick, budaya}) {
+  const [inputFocus, setInputFocus] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [filteredBudaya, setFilteredBudaya] = useState([]);
   const [showDetail, setshowDetail] = useState(false);
@@ -31,6 +32,15 @@ function ComponentOnePustaka({handleClick, budaya}) {
   const handleOverlayClose = () => {
     setshowDetail(false);
   };
+
+  const handleInputFocus = () => {
+    setInputFocus(true);
+  };
+
+  const handleInputBlur = () => {
+    setInputFocus(false);
+  };
+
     return (
       <div className="w-full relative font-poppins text-center">
         {showDetail && (
@@ -78,6 +88,8 @@ function ComponentOnePustaka({handleClick, budaya}) {
             className="w-full py-2 pl-4 pr-2 rounded-full bg-basicColor flex items-center focus:outline-none"
             placeholder="Cari Budayamu disini..."
             onChange={handleInputChange}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
           />
           
           <div
@@ -86,7 +98,7 @@ function ComponentOnePustaka({handleClick, budaya}) {
           >
             Temukan Provinsi
           </div>
-          {filteredBudaya.length > 0 && inputValue != "" && (
+          {filteredBudaya.length > 0 && inputValue != "" && inputFocus && (
             <div className=" rounded-xl pl-6 text-left absolute top-full left-1/2 transform -translate-x-1/2 bg-basicColor border border-gray-300 shadow-md w-full">
               <ul className="max-h-40 overflow-y-auto">
                 {filteredBudaya.map((item, index) => (

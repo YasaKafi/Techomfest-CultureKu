@@ -57,20 +57,22 @@ function ComponentFourPustaka({ budayaData }) {
             modules={[Pagination, Navigation, EffectCoverflow]}
             className="w-full  h-full relative"
           >
-            {budayaData.map((item, index) => (
-              <SwiperSlide
-                key={index}
-                data-swiper-autoplay="2000"
-                className="w-full   shadow-none bg-transparent  rounded-3xl h-4/5 "
-              >
-                <CardSlider
-                  name={item.nama_budaya}
-                  images={item.image_budaya}
-                  asal={item.asal_budaya}
-                  desc={item.deskripsi_budaya}
-                />
-              </SwiperSlide>
-            ))}
+            {budayaData
+              .filter((item) => item.budaya_mendunia === 1)
+              .map((item, index) => (
+                <SwiperSlide
+                  key={index}
+                  data-swiper-autoplay="2000"
+                  className="w-full shadow-none bg-transparent rounded-3xl h-4/5"
+                >
+                  <CardSlider
+                    name={item.nama_budaya}
+                    images={item.image_budaya}
+                    asal={item.asal_budaya}
+                    desc={item.deskripsi_budaya}
+                  />
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>
