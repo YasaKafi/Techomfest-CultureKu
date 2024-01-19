@@ -14,8 +14,9 @@ export default function NavBar({provinsiData, pulauData}) {
     name: provinsi.nama_provinsi
   }));
   const isActive = (path) => {
-    return location.pathname === path ? "font-semibold" : "";
+    return location.pathname === path ? "font-semibold" : "text-black";
   };
+  
   const [inputValue, setInputValue] = useState("");
   const [filteredProvinsi, setFilteredProvinsi] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -83,7 +84,7 @@ export default function NavBar({provinsiData, pulauData}) {
                 <input 
                   type="text" 
                   className="w-56 h-5 left-[25px] top-[15px] absolute bg-zinc-800 text-xs font-medium font-['Poppins'] leading-3"
-                  placeholder="Contoh : “Provinsi Jawa”"
+                  placeholder="Contoh : “Jawa Tengah”"
                   style={{ outline: "none" }}
                   onChange={handleInputChange}
                 />
@@ -221,7 +222,7 @@ export default function NavBar({provinsiData, pulauData}) {
         <Popover.Group className="hidden ml-64 lg:flex lg:gap-x-5 mr-10 mt-1">
           <a
             href="/"
-            className="text-sm font-semibold leading-6 text-black hover:text-green-600  px-4 py-2 rounded"
+            className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
           >
             Budaya Kita
           </a>
