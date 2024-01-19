@@ -14,9 +14,7 @@ export default function NavBar({provinsiData, pulauData}) {
     name: provinsi.nama_provinsi
   }));
 
-  const isActive = (path) => {
-    return location.pathname === path ? "font-semibold" : "text-black";
-  };
+  const isActive = (path) => (location.pathname === path ? "text-black" : "font-semibold");
 
   console.log(isActive("/pustaka-budaya"));
 
