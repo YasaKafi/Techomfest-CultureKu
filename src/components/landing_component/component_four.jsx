@@ -98,7 +98,8 @@ function ComponentFourLanding() {
                 </>
               ) : (
                 <>
-                <div className="h-full w-full flex es:flex-row-reverse md:flex-col md:justify-evenly es:justify-around  es:items-center">
+                <div className="h-full w-full flex es:flex-row-reverse md:flex-col md:justify-evenly es:justify-around  es:items-center"
+                  style={{cursor:"pointer"}}>
                 <div className="md:w-48 md:h-px es:h-px es:w-40 md:-rotate-90 es:rotate-0 border-2 border-stone-100 rounded-xl"></div>
                   <div className="md:w-52 md:h-10 md:-rotate-90 es:rotate-0 text-stone-100 xl:text-2xl md:text-xl es:text-sm  font-medium font-['Poppins'] leading-7">
                     {titles[index]}
