@@ -146,7 +146,7 @@ function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, im
         </div>
       )}
       {showOverlayEmpat && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed top-0 left-0 w-full bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className=" w-1/2 h-1/2 bg-basicColor p-12 rounded-2xl shadow-2xl relative z-10">
             <span onClick={closeOverlayEmpat} className="absolute top-0 right-0 m-3 cursor-pointer">
             <IoMdCloseCircle  size={40} className="hover:text-red-500" />
