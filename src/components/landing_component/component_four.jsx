@@ -43,7 +43,7 @@ function ComponentFourLanding() {
   return (
     <>
       <div
-        className="w-full h-screen flex 2xl:pr-20 flex-col md:pl-36 es:pl-8 pt-20 pb-20"
+        className="w-full flex 2xl:pr-20 flex-col md:pl-36 es:pl-8 pt-20 pb-20"
         style={{
           backgroundImage: `url(${imageAsset.bgCandiBorobudur})`,
           backgroundPosition: "center",
