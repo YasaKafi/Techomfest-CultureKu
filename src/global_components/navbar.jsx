@@ -148,6 +148,7 @@ export default function NavBar({provinsiData, pulauData}) {
                               className="text-lg leading-6 text-neutral-500 hover:text-green-600 px-4 py-2 rounded"
                               key={index}
                               to={`/detail-page/${filteredProvinsi.id}`}
+                              onClick={() => setShowOverlayFilter(false)}
                             >
                               Provinsi {filteredProvinsi.name}
                             </Link>

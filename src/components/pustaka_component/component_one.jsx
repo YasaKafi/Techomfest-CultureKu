@@ -92,7 +92,7 @@ function ComponentOnePustaka({handleClick, budaya}) {
             className="ml-4 lg:flex es:hidden text-basicColor bg-premierColor rounded-full px-8 py-2 font-semibold"
             onClick={() => handleSuggestionClick(filteredBudaya[0].nama_budaya, filteredBudaya[0].image_budaya, filteredBudaya[0].deskripsi_budaya)}
           >
-            Temukan Provinsi
+            Temukan Budaya
           </div>
           {filteredBudaya.length > 0 && inputValue != "" && inputFocus && (
             <div className=" rounded-xl text-left absolute top-full left-1/2 transform -translate-x-1/2 bg-basicColor border border-gray-300 shadow-md w-full">
