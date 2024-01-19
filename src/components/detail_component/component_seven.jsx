@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import imageAsset from "../../utils/image";
 import { RiInformationFill } from "react-icons/ri";
 import { IoMdCloseCircle } from "react-icons/io";
@@ -8,6 +8,19 @@ function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, im
   const [showOverlayDua, setShowOverlayDua] = useState(false);
   const [showOverlayTiga, setShowOverlayTiga] = useState(false);
   const [showOverlayEmpat, setShowOverlayEmpat] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleImageClickSatu = () => {
     setShowOverlaySatu(true);
@@ -55,7 +68,7 @@ function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, im
               daerahnya
             </div>
           </div>
-          <div className="w-full mt-10 h-4/5 flex lg:flex-row es:flex-col lg:px-32 es:px-8 ">
+          <div className="w-full mt-10 h-4/5 flex lg:flex-row es:flex-col lg:px-32 es:px-8 ${windowWidth < 1030 ? 'pb-56' : ''}`}">
             <img
               src={imageBudayaSatu}
               alt=""
