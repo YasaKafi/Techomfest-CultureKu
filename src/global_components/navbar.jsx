@@ -13,7 +13,7 @@ export default function NavBar({provinsiData, pulauData}) {
     id_pulau: provinsi.id_pulau,
     name: provinsi.nama_provinsi
   }));
-  const isActive = (path) => (location.pathname === path ? "text-black" : "font-semibold");
+  const isActive = (path) => (location.pathname === path ? "font-semibold" : "text-black");
   
   const [inputValue, setInputValue] = useState("");
   const [filteredProvinsi, setFilteredProvinsi] = useState([]);
