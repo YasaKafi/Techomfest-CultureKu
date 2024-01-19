@@ -1,11 +1,21 @@
-import React from "react";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import imageAsset from "../../utils/image";
+import React, { useState } from 'react';
 
 const GaleriSlider = (props) => {
   const { rtl, budayaData } = props;
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
   const settings = {
     dots: false,
     rtl: rtl,
@@ -36,20 +46,31 @@ const GaleriSlider = (props) => {
   return (
     <div className="w-full">
     <Slider {...settings}>
-      {budayaData && budayaData.length > 0 ? (
-        budayaData.map((data, index) => (
-          <div key={index} className="px-[5px] pt-2">
-            <img
-              src={data.image_budaya}
-              alt={`Image ${index + 1}`}
-              className="w-96 h-48 object-cover"
-            />
-          </div>
-        ))
-      ) : (
-        <div>No images available</div>
-      )}
-    </Slider>
+        {budayaData && budayaData.length > 0 ? (
+          budayaData.map((data, index) => (
+            <div
+              key={index}
+              className="relative px-[5px] pt-2"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                src={data.image_budaya}
+                alt={`Image ${index + 1} not found`}
+                className="w-96 h-48 object-cover"
+              />
+              {hoveredIndex === index && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                  <p className="text-white">{data.nama_budaya}</p>
+                </div>
+              )}
+            </div>
+            
+          ))
+        ) : (
+          <div>No images available</div>
+        )}
+      </Slider>
   </div>
   );
 };
