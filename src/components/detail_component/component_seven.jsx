@@ -68,7 +68,7 @@ function ComponentSevenDetail({namaProvinsi, imageBudayaSatu, imageBudayaDua, im
               daerahnya
             </div>
           </div>
-          <div className="w-full mt-10 h-4/5 flex lg:flex-row es:flex-col lg:px-32 es:px-8 ${windowWidth < 1030 ? 'pb-56' : ''}`}">
+          <div className={`w-full mt-10 h-4/5 flex lg:flex-row es:flex-col lg:px-32 es:px-8 ${windowWidth < 1030 ? 'pb-56' : ''}`}>
             <img
               src={imageBudayaSatu}
               alt=""
