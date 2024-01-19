@@ -13,10 +13,11 @@ export default function NavBar({provinsiData, pulauData}) {
     id_pulau: provinsi.id_pulau,
     name: provinsi.nama_provinsi
   }));
-  const isActive = (path) => {
-    return location.pathname === path ? "font-semibold" : "text-black";
-  };
-  
+
+  const isActive = (path) => (location.pathname === path ? "font-semibold" : "text-black");
+
+  console.log(isActive("/pustaka-budaya"));
+
   const [inputValue, setInputValue] = useState("");
   const [filteredProvinsi, setFilteredProvinsi] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -225,20 +226,25 @@ export default function NavBar({provinsiData, pulauData}) {
         <Popover.Group className="hidden ml-64 lg:flex lg:gap-x-5 mr-10 mt-1">
           <a
             href="/"
-            className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
-          >
+            className={`text-sm leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded ${isActive(
+              "/"
+            )}`}>
             Budaya Kita
           </a>
           <a
             href="/pustaka-budaya"
-            className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
+            className={`text-sm leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded ${isActive(
+              "/pustaka-budaya"
+            )}`}
           >
             Pustaka Budaya
           </a>
 
           <a
             href="/historiografi-page"
-            className="text-sm font-semibold leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded"
+            className={`text-sm leading-6 text-neutral-500 hover:text-green-600  px-4 py-2 rounded ${isActive(
+              "/historiografi-page"
+            )}`}
           >
             Historiografi
           </a>
