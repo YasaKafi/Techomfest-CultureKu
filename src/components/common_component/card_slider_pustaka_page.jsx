@@ -1,10 +1,9 @@
 import React from "react";
-import imageAsset from "../../utils/image";
 
 const CardSlider = ({name, asal, desc,images} ) => {
     return(
         <>
-            <div className="w-full h-full relative rounded-3xl">
+            <div className="w-full h-full  relative rounded-3xl">
                 <div
                   className="w-full h-full left-0 top-0 absolute bg-gradient-to-r from-zinc-800 to-black rounded-3xl"
                   style={{
