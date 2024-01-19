@@ -64,7 +64,7 @@ export default function NavBar({provinsiData, pulauData}) {
           </a>
         </div>
         {showOverlay && (
-          <div className="fixed top-0 left-0 w-screen h-screen bg-darkColor  z-50">
+          <div className="fixed top-0 left-0 w-screen h-screen bg-darkColor z-50">
             <div className="absolute top-0 right-0 mr-5 mt-5">
               <IoMdCloseCircle
                 size={40}
@@ -131,7 +131,9 @@ export default function NavBar({provinsiData, pulauData}) {
                 <div>
                   
                 </div>
-                <div className="w-full h-full mt-10 overflow-scroll">
+                <div className="w-full h-full mt-10"
+                  style={{ overflowY: "auto" }}
+                  >
                   {pulauData.map((pulau, index) => (
                     <div key={index}> 
                       <div className="font-semibold text-lg ml-4">

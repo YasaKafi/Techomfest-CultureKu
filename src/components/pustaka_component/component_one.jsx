@@ -31,14 +31,11 @@ function ComponentOnePustaka({handleClick, budaya}) {
 
   const handleOverlayClose = () => {
     setshowDetail(false);
+    setInputFocus(false);
   };
 
   const handleInputFocus = () => {
     setInputFocus(true);
-  };
-
-  const handleInputBlur = () => {
-    setInputFocus(false);
   };
 
     return (
@@ -89,7 +86,6 @@ function ComponentOnePustaka({handleClick, budaya}) {
             placeholder="Cari Budayamu disini..."
             onChange={handleInputChange}
             onFocus={handleInputFocus}
-            onBlur={handleInputBlur}
           />
           
           <div
