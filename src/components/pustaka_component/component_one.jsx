@@ -31,14 +31,11 @@ function ComponentOnePustaka({handleClick, budaya}) {
 
   const handleOverlayClose = () => {
     setshowDetail(false);
+    setInputFocus(false);
   };
 
   const handleInputFocus = () => {
     setInputFocus(true);
-  };
-
-  const handleInputBlur = () => {
-    setInputFocus(false);
   };
 
     return (
@@ -89,7 +86,6 @@ function ComponentOnePustaka({handleClick, budaya}) {
             placeholder="Cari Budayamu disini..."
             onChange={handleInputChange}
             onFocus={handleInputFocus}
-            onBlur={handleInputBlur}
           />
           
           <div
@@ -99,12 +95,12 @@ function ComponentOnePustaka({handleClick, budaya}) {
             Temukan Provinsi
           </div>
           {filteredBudaya.length > 0 && inputValue != "" && inputFocus && (
-            <div className=" rounded-xl pl-6 text-left absolute top-full left-1/2 transform -translate-x-1/2 bg-basicColor border border-gray-300 shadow-md w-full">
+            <div className=" rounded-xl text-left absolute top-full left-1/2 transform -translate-x-1/2 bg-basicColor border border-gray-300 shadow-md w-full">
               <ul className="max-h-40 overflow-y-auto">
                 {filteredBudaya.map((item, index) => (
                   <li
                     key={index}
-                    className="py-2 px-4 cursor-pointer hover:bg-gray-100"
+                    className="py-2 pl-6 px-4 cursor-pointer hover:bg-gray-100"
                     onClick={() => handleSuggestionClick(item.nama_budaya, item.image_budaya, item.deskripsi_budaya)}
                   >
                     {item.nama_budaya}

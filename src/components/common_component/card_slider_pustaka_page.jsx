@@ -7,10 +7,12 @@ const CardSlider = ({name, asal, desc,images} ) => {
                 <div
                   className="w-full h-full left-0 top-0 absolute bg-gradient-to-r from-zinc-800 to-black rounded-3xl"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${images})`,
+                    backgroundColor: "rgba(0, 0, 0)", 
+                    backgroundImage: `url(${images})`,
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
+                    opacity: 0.9,
                   }}
                 />
                 <div className=" h-10 lg:left-[81px] es:left-5 top-[70px] absolute text-stone-100 lg:text-3xl es:text-xl font-bold font-['Poppins'] leading-loose">
