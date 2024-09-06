@@ -13,8 +13,8 @@ function HistoriografiPage({ provinsiData, pulauData }) {
             <NavBar provinsiData={provinsiData} pulauData={pulauData}/>
             <ComponentOneHistoriografi/>
             <ComponentTwoHistoriografi/>
-            <ComponentThreeHistoriografi/>
-            <ComponentFourHistoriografi/>
+            {/* <ComponentThreeHistoriografi/>
+            <ComponentFourHistoriografi/> */}
             <FooterComponent/>
         </div>
     </>
